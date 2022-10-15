@@ -1,5 +1,5 @@
-export default function Heading({ text }) {
+export default function Heading({ text, className }) {
   return (
-    <h2 className="font-bold md:text-center w-full pt-8 text-4xl">{text}</h2>
+    <h2 className={"font-bold  w-full pt-8 text-4xl " + className}>{text}</h2>
   );
 }
