@@ -1,6 +1,9 @@
 require('dotenv').config()
+console.log("===========>",process.env.gmail_from)
 
 const PASSWORD = process.env.password
+const GMAIL = process.env.gmail
+const GMAIL_FROM = process.env.gmail_from
 
 export default function (req, res) {
     let nodemailer = require('nodemailer')
@@ -8,15 +11,15 @@ export default function (req, res) {
         port: 465,
         host: "smtp.gmail.com",
         auth: {
-          user: 'innocentmasuki.me@gmail.com',
+          user: GMAIL_FROM,
           pass: PASSWORD,
         },
         secure: true,
       })
 
        const mailData = {
-        from: 'innocentmasuki.me@gmail.com',
-        to: 'innocentmasuki99@gmail.com',
+        from: GMAIL_FROM,
+        to: GMAIL,
         subject: `Message From ${req.body.full_name}`,
         text: "Budget: " +req.body.budget + " | For project: " + req.body.project+ " | Sent from: " + req.body.email+ " | With phone: " + req.body.phone,
         html: `
