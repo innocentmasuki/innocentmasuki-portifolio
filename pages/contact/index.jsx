@@ -17,9 +17,27 @@ function Contact() {
   const [budget, setBudget] = useState("");
   const [project, setProject] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [disabled, setDisabled] = useState(true);
+
+  function saySent() {
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+    }, "2000");
+  }
+
+  useEffect(() => {
+    if (full_name === "" || email === "" || phone === "" || project === "") {
+      setDisabled(true);
+    } else {
+      setDisabled(false);
+    }
+  }, [full_name, email, phone, project]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSubmitting(true);
     let data = {
       full_name,
       email,
@@ -36,15 +54,14 @@ function Contact() {
       },
       body: JSON.stringify(data),
     }).then((res) => {
-      console.log("Response received");
+      setSubmitting(false);
       if (res.status === 200) {
-        console.log("Response succeeded!");
-        setSubmitted(true);
         setFull_name("");
         setEmail("");
         setBudget("");
         setPhone("");
         setProject("");
+        saySent();
       }
     });
   };
@@ -89,6 +106,7 @@ function Contact() {
                   type="text"
                   classes="text-gray-400 focus:text-white border-b-gray-400 focus:border-b-white"
                   placeholder="Your name"
+                  value={full_name}
                   onDataChange={(e) => {
                     setFull_name(e.target.value);
                   }}
@@ -97,6 +115,7 @@ function Contact() {
                   type="email"
                   classes="text-gray-400 focus:text-white border-b-gray-400 focus:border-b-white"
                   placeholder="Your email address"
+                  value={email}
                   onDataChange={(e) => {
                     setEmail(e.target.value);
                   }}
@@ -105,6 +124,7 @@ function Contact() {
                   type="tel"
                   classes="text-gray-400 focus:text-white border-b-gray-400 focus:border-b-white"
                   placeholder="Your phone number"
+                  value={phone}
                   onDataChange={(e) => {
                     setPhone(e.target.value);
                   }}
@@ -112,7 +132,8 @@ function Contact() {
                 <Input
                   type="text"
                   classes="text-gray-400 focus:text-white border-b-gray-400 focus:border-b-white"
-                  placeholder="Your budget"
+                  placeholder="Your budget (optional)"
+                  value={budget}
                   onDataChange={(e) => {
                     setBudget(e.target.value);
                   }}
@@ -120,20 +141,26 @@ function Contact() {
                 <TextArea
                   classes="text-gray-400 focus:text-white border-b-gray-400 focus:border-b-white"
                   placeholder="Project Descriptions"
+                  value={project}
                   onDataChange={(e) => {
                     setProject(e.target.value);
                   }}
                   rows={5}
                 />
                 <div className="flex justify-end">
-                  <input
-                    type="submit"
-                    value="send"
+                  <button
+                    disabled={submitting || disabled}
                     onClick={(e) => {
                       handleSubmit(e);
                     }}
-                    className="bg-white  text-gray-700 px-4 py-2"
-                  />
+                    className={
+                      submitted
+                        ? "bg-transparent  disabled:bg-gray-500 disabled:border-gray-500 disabled:text-gray-700 hover:bg-green-500 duration-200 border-green-500 border-2 cursor-pointer hover:text-white text-green-500 px-4 py-2"
+                        : "bg-transparent  disabled:bg-gray-500 disabled:border-gray-500 disabled:text-gray-700 hover:bg-white duration-200 border-white border-2 cursor-pointer hover:text-gray-500 text-white px-4 py-2"
+                    }
+                  >
+                    {submitting ? "Sending..." : submitted ? "Sent " : "Send"}
+                  </button>
                 </div>
               </form>
             </div>
