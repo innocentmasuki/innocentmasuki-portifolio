@@ -27,7 +27,7 @@ function Layout({ children }) {
         </ul>
       </nav>
       <aside>
-        <div className="flex opacity-5px-4 md:px-10 lg:px-32 opacity-5 md:opacity-20 w-screen absolute top-0 left-0 -z-10 items-center justify-center md:justify-end h-screen">
+        <div className="flex  px-4 md:px-10 lg:px-32 opacity-5 md:opacity-20 w-screen absolute top-0 left-0 -z-10 items-center justify-center md:justify-end h-screen">
           <Image src={"/images/profile.png"} height="500" width="500" />
         </div>
       </aside>

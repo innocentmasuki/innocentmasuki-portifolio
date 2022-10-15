@@ -1,6 +1,6 @@
 function Footer({ data }) {
   return (
-    <footer className="w-full py-2 text-gray-400 bg-white  md:flex justify-between">
+    <footer className="w-full fixed bottom-0 left-0 px-4 md:px-10 lg:px-32 py-2 text-gray-400 bg-white  md:flex justify-between">
       <div className="flex justify-center gap-4">
         <a
           target={"_blank"}
