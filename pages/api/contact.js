@@ -24,6 +24,7 @@ export default function (req, res) {
             <h1>Name: ${req.body.full_name}</h1>
             <ul>
                 <li><b>Phone: ${req.body.phone}</b></li>
+                <li><b>Email: ${req.body.email}</b></li>
                 <li><b>Budget: ${req.body.budget}</b></li>
                 <li><b>Project: ${req.body.project}</b></li>
             </ul>
