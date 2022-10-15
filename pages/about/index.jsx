@@ -28,7 +28,7 @@ function About() {
         <Heading text={"Hobbies"} />
         <Paragraph text={data.aboutMe.hobbies.replaceAll(",", " | ")} />
         <Heading text={"Skills & Tools"} />
-        <div class="grid grid-cols-1 py-4 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div class="grid grid-cols-1 py-4 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {data.skills.map((skill, index) => (
             <Skill
               icon={skill.icon}

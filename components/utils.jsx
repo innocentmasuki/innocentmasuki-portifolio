@@ -1,6 +1,4 @@
 import {
-  DiAndroid,
-  DiApple,
   DiBootstrap,
   DiDocker,
   DiGit,
@@ -10,16 +8,21 @@ import {
   DiPhotoshop,
   DiReact,
 } from "react-icons/di";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import {
+  SiXcode,
+  SiAndroidstudio,
+  SiTailwindcss,
+  SiNextdotjs,
+} from "react-icons/si";
 
 const skills = [
   {
     title: "Android Dev",
-    icon: <DiAndroid />,
+    icon: <SiAndroidstudio />,
     link: "https://developer.android.com/",
   },
   {
-    icon: <DiApple />,
+    icon: <SiXcode />,
     link: "https://developer.apple.com/ios/",
     title: "iOS Dev",
   },

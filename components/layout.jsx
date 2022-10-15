@@ -28,11 +28,16 @@ function Layout({ children }) {
       </nav>
       <aside>
         <div className="flex  px-4 md:px-10 lg:px-32 opacity-5 md:opacity-20 w-screen absolute top-0 left-0 -z-10 items-center justify-center md:justify-end h-screen">
-          <Image src={"/images/profile.png"} height="500" width="500" />
+          <Image
+            src={"/images/profile.png"}
+            alt="Innocent Masuki Background"
+            height="500"
+            width="500"
+          />
         </div>
       </aside>
       <main className="w-full  flex flex-grow">
-        <div className="w-full h-full">{children}</div>
+        <div className="w-full h-full pb-10">{children}</div>
       </main>
       <Footer data={data.mediaData} />
     </div>

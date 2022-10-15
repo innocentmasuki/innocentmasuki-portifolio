@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Button({ title, link, a }) {
   if (a === true)
     return (
-      <a target={"_blank"} href={link}>
+      <a target={"_blank"} rel="noreferrer" href={link}>
         <button className="group  text-bold duration-300 ">
           <div className="flex justify-start">
             <div className="group-hover:underline underline-offset-1 duration-300">

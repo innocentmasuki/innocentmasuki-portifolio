@@ -12,7 +12,7 @@ export default function Home() {
       <Layout>
         <div className="flex items-center w-full justify-center md:justify-start h-full">
           <div className="text-center md:text-left text-gray-700">
-            <h1 className="font-bold  text-4xl pb-4">Hy I'm</h1>
+            <h1 className="font-bold  text-4xl pb-4">{"Hy I'm"}</h1>
             <p className=" text-6xl md:text-8xl  ">Innocent Masuki</p>
             <p className="md:text-xl mb-20 pb-8 ">
               <span className="font-bold">Freelancer</span>,
