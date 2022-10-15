@@ -7,7 +7,6 @@ import Input from "../../components/common/input";
 import TextArea from "../../components/common/textarea";
 import Heading from "../../components/common/heading";
 import Paragraph from "../../components/common/paragraph";
-import Loader from "../../components/common/loading";
 
 import data from "../../components/utils";
 
@@ -19,6 +18,7 @@ function Contact() {
   const [project, setProject] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [disabled, setDisabled] = useState(true);
 
   function saySent() {
     setSubmitted(true);
@@ -26,6 +26,14 @@ function Contact() {
       setSubmitted(false);
     }, "2000");
   }
+
+  useEffect(() => {
+    if (full_name === "" || email === "" || phone === "" || project === "") {
+      setDisabled(true);
+    } else {
+      setDisabled(false);
+    }
+  }, [full_name, email, phone, project]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -98,6 +106,7 @@ function Contact() {
                   type="text"
                   classes="text-gray-400 focus:text-white border-b-gray-400 focus:border-b-white"
                   placeholder="Your name"
+                  value={full_name}
                   onDataChange={(e) => {
                     setFull_name(e.target.value);
                   }}
@@ -106,6 +115,7 @@ function Contact() {
                   type="email"
                   classes="text-gray-400 focus:text-white border-b-gray-400 focus:border-b-white"
                   placeholder="Your email address"
+                  value={email}
                   onDataChange={(e) => {
                     setEmail(e.target.value);
                   }}
@@ -114,6 +124,7 @@ function Contact() {
                   type="tel"
                   classes="text-gray-400 focus:text-white border-b-gray-400 focus:border-b-white"
                   placeholder="Your phone number"
+                  value={phone}
                   onDataChange={(e) => {
                     setPhone(e.target.value);
                   }}
@@ -121,7 +132,8 @@ function Contact() {
                 <Input
                   type="text"
                   classes="text-gray-400 focus:text-white border-b-gray-400 focus:border-b-white"
-                  placeholder="Your budget"
+                  placeholder="Your budget (optional)"
+                  value={budget}
                   onDataChange={(e) => {
                     setBudget(e.target.value);
                   }}
@@ -129,6 +141,7 @@ function Contact() {
                 <TextArea
                   classes="text-gray-400 focus:text-white border-b-gray-400 focus:border-b-white"
                   placeholder="Project Descriptions"
+                  value={project}
                   onDataChange={(e) => {
                     setProject(e.target.value);
                   }}
@@ -136,7 +149,7 @@ function Contact() {
                 />
                 <div className="flex justify-end">
                   <button
-                    disabled={submitting}
+                    disabled={submitting || disabled}
                     onClick={(e) => {
                       handleSubmit(e);
                     }}

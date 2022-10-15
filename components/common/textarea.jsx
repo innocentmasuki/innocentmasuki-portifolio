@@ -1,4 +1,10 @@
-export default function TextArea({ classes, placeholder, rows, onDataChange }) {
+export default function TextArea({
+  value,
+  classes,
+  placeholder,
+  rows,
+  onDataChange,
+}) {
   return (
     <textarea
       className={
@@ -8,6 +14,7 @@ export default function TextArea({ classes, placeholder, rows, onDataChange }) {
       placeholder={placeholder}
       onChange={(e) => onDataChange(e)}
       rows={rows}
+      value={value}
     ></textarea>
   );
 }
