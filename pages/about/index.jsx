@@ -1,5 +1,12 @@
-import Layout from "../../components/layout";
 import Head from "next/head";
+
+import Layout from "../../components/layout";
+import Heading from "../../components/common/heading";
+import Paragraph from "../../components/common/paragraph";
+import Button from "../../components/common/button";
+import Skill from "../../components/content/skill";
+
+import data from "../../components/utils";
 
 function About() {
   return (
@@ -8,7 +15,29 @@ function About() {
         <title>i.me | About</title>
       </Head>
       <Layout>
-        <h1 className="text-3xl text-red-500 font-bold underline">about</h1>
+        <Heading text={"Who am I"} />
+        <Paragraph text={data.aboutMe.bio} />
+        <Button
+          a={true}
+          title={"My Resume"}
+          link={
+            "https://docs.google.com/document/d/1AfhSLWntV1B-zvpPEygaJwGbHDQRTN7HQPoVbtmhn24/edit?usp=sharing"
+          }
+        />
+
+        <Heading text={"Hobbies"} />
+        <Paragraph text={data.aboutMe.hobbies.replaceAll(",", " | ")} />
+        <Heading text={"Skills & Tools"} />
+        <div class="grid grid-cols-1 py-4 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          {data.skills.map((skill, index) => (
+            <Skill
+              icon={skill.icon}
+              link={skill.link}
+              title={skill.title}
+              key={index}
+            />
+          ))}
+        </div>
       </Layout>
     </>
   );
