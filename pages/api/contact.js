@@ -1,11 +1,9 @@
 require('dotenv').config()
-console.log("===========>",process.env.gmail_from)
-
 const PASSWORD = process.env.password
 const GMAIL = process.env.gmail
 const GMAIL_FROM = process.env.gmail_from
 
-export default function (req, res) {
+export default async function (req, res) {
     let nodemailer = require('nodemailer')
     const transporter = nodemailer.createTransport({
         port: 465,
@@ -35,12 +33,14 @@ export default function (req, res) {
         </div>
        `
       }
-      transporter.sendMail(mailData, function (err, info) {
+     transporter.sendMail(mailData, function (err, info) {
         if(err)
           console.log(err)
         else
-          console.log(info)
+          if(info.accepted[0] === GMAIL){
+            res.status(200).end()
+          }
       })
 
-      res.status(200)
+
   }

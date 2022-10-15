@@ -7,6 +7,7 @@ import Input from "../../components/common/input";
 import TextArea from "../../components/common/textarea";
 import Heading from "../../components/common/heading";
 import Paragraph from "../../components/common/paragraph";
+import Loader from "../../components/common/loading";
 
 import data from "../../components/utils";
 
@@ -17,9 +18,18 @@ function Contact() {
   const [budget, setBudget] = useState("");
   const [project, setProject] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  function saySent() {
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+    }, "2000");
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSubmitting(true);
     let data = {
       full_name,
       email,
@@ -36,15 +46,14 @@ function Contact() {
       },
       body: JSON.stringify(data),
     }).then((res) => {
-      console.log("Response received");
+      setSubmitting(false);
       if (res.status === 200) {
-        console.log("Response succeeded!");
-        setSubmitted(true);
         setFull_name("");
         setEmail("");
         setBudget("");
         setPhone("");
         setProject("");
+        saySent();
       }
     });
   };
@@ -126,14 +135,19 @@ function Contact() {
                   rows={5}
                 />
                 <div className="flex justify-end">
-                  <input
-                    type="submit"
-                    value="send"
+                  <button
+                    disabled={submitting}
                     onClick={(e) => {
                       handleSubmit(e);
                     }}
-                    className="bg-white  text-gray-700 px-4 py-2"
-                  />
+                    className={
+                      submitted
+                        ? "bg-transparent  disabled:bg-gray-500 disabled:border-gray-500 disabled:text-gray-700 hover:bg-green-500 duration-200 border-green-500 border-2 cursor-pointer hover:text-white text-green-500 px-4 py-2"
+                        : "bg-transparent  disabled:bg-gray-500 disabled:border-gray-500 disabled:text-gray-700 hover:bg-white duration-200 border-white border-2 cursor-pointer hover:text-gray-500 text-white px-4 py-2"
+                    }
+                  >
+                    {submitting ? "Sending..." : submitted ? "Sent " : "Send"}
+                  </button>
                 </div>
               </form>
             </div>
