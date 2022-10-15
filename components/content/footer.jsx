@@ -4,6 +4,7 @@ function Footer({ data }) {
       <div className="flex justify-center gap-4">
         <a
           target={"_blank"}
+          rel="noreferrer"
           href={"mailto:" + data.email}
           className="hover:underline"
         >
@@ -15,6 +16,7 @@ function Footer({ data }) {
         {data.medias.map((media, index) => (
           <a
             target={"_blank"}
+            rel="noreferrer"
             key={index}
             href={media.link}
             className="hover:underline"
