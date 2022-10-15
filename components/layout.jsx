@@ -8,7 +8,7 @@ import data from "./utils";
 function Layout({ children }) {
   return (
     <div className="flex font-visuelt px-4 md:px-10 lg:px-32 flex-col h-screen">
-      <nav className="w-full pb-2  pt-4 flex justify-between">
+      <nav className="w-full pb-2 sticky top-0 left-0 bg-white  pt-4 flex justify-between">
         <Link href={"/"}>
           <span className="text-4xl font-sacramento">
             <span className="inline md:hidden">i</span>
@@ -27,7 +27,7 @@ function Layout({ children }) {
         </ul>
       </nav>
       <aside>
-        <div className="flex  px-4 md:px-10 lg:px-32 opacity-5 md:opacity-20 w-screen absolute top-0 left-0 -z-10 items-center justify-center md:justify-end h-screen">
+        <div className="flex  px-4 md:px-10 lg:px-32 opacity-5 md:opacity-20 w-screen fixed top-0 left-0 -z-10 items-center justify-center md:justify-end h-screen">
           <Image
             src={"/images/profile.png"}
             alt="Innocent Masuki Background"
@@ -37,7 +37,7 @@ function Layout({ children }) {
         </div>
       </aside>
       <main className="w-full  flex flex-grow">
-        <div className="w-full h-full pb-10">{children}</div>
+        <div className="w-full h-full pb-20">{children}</div>
       </main>
       <Footer data={data.mediaData} />
     </div>
