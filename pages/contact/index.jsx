@@ -76,10 +76,10 @@ function Contact() {
           <div className="w-full md:w-1/2">
             <div className="flex  items-center justify-center h-full">
               <div>
-                <Heading text={"Lets Talk"} className="text-left" />
+                <Heading text={"Let's talk"} className="text-left" />
                 <Paragraph
                   text={
-                    "Get in touch, Let us discuss about your project and start implementing it"
+                    "Get in touch, let us discuss your project and start implementing it!"
                   }
                   className={"py-10"}
                 />
@@ -140,7 +140,7 @@ function Contact() {
                 />
                 <TextArea
                   classes="text-gray-400 focus:text-white border-b-gray-400 focus:border-b-white"
-                  placeholder="Project Descriptions"
+                  placeholder="Project description"
                   value={project}
                   onDataChange={(e) => {
                     setProject(e.target.value);
