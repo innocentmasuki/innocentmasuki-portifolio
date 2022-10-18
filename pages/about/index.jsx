@@ -15,7 +15,7 @@ function About() {
         <title>i.me | About</title>
       </Head>
       <Layout>
-        <Heading text={"Who am I"} className="md:text-center" />
+        <Heading text={"Who am I?"} className="md:text-center" />
         <Paragraph text={data.aboutMe.bio} />
         <Button
           a={true}
@@ -27,7 +27,7 @@ function About() {
 
         <Heading text={"Hobbies"} className="md:text-center mt-16" />
         <Paragraph text={data.aboutMe.hobbies.replaceAll(",", " | ")} />
-        <Heading text={"Skills & Tools"} className="md:text-center mt-16" />
+        <Heading text={"Skills & tools"} className="md:text-center mt-16" />
         <div class="grid grid-cols-1 py-4 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {data.skills.map((skill, index) => (
             <Skill

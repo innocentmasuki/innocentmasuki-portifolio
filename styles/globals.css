@@ -2,22 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-    font-family: 'Sacramento';
-    src: url('../asset/fonts/sacramento-regular.ttf');
+    font-family: "Sacramento";
+    src: url("../asset/fonts/sacramento-regular.ttf");
     font-style: normal;
 }
 
-
-
 @font-face {
-    font-family: 'Visuelt';
-    src: url('../asset/fonts/visuelt-regular.ttf');
+    font-family: "Visuelt";
+    src: url("../asset/fonts/visuelt-regular.ttf");
     font-style: normal;
 }
 
-*{
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
--webkit-tap-highlight-color: transparent;
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.home-link {
+    cursor: pointer;
 }
