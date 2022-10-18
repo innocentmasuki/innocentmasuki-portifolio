@@ -19,7 +19,7 @@ export default function Home() {
               <span className="font-bold">web</span> and{" "}
               <span className="font-bold">mobile</span> developer.
             </p>
-            <Button title={"My Works"} link={"/works"} />
+            <Button title={"My works"} link={"/works"} />
           </div>
         </div>
       </Layout>
