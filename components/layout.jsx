@@ -10,7 +10,7 @@ function Layout({ children }) {
     <div className="flex font-visuelt px-4 md:px-10 lg:px-32 flex-col h-screen">
       <nav className="w-full pb-2 sticky top-0 left-0 bg-white  pt-4 flex justify-between">
         <Link href={"/"}>
-          <span className="text-4xl font-sacramento">
+          <span className="text-4xl font-sacramento home-link">
             <span className="inline md:hidden">i</span>
             <span className="hidden md:inline lg:hidden">innocent</span>
             <span className="hidden md:hidden lg:inline">innocentmasuki</span>
