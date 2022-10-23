@@ -18,7 +18,7 @@ export default function Button({ title, link, a }) {
 
   return (
     <Link href={link}>
-      <button className="group mt-20 text-bold duration-300 ">
+      <button className="group  mt-20 text-bold duration-300 ">
         <div className="flex justify-start">
           <div className="group-hover:underline underline-offset-1 duration-300">
             {title}
