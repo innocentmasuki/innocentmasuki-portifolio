@@ -1,7 +1,9 @@
-import Button from "../../common/button";
 import Image from "next/image";
 import Script from "next/script";
 import { useEffect, useRef } from "react";
+
+import InnocentImage from "./innocentImage";
+import HeroTexts from "./heroTexts";
 
 export default function HomePage() {
   const cursorRef = useRef(null);
@@ -41,23 +43,8 @@ export default function HomePage() {
     <>
       <div className=" relative cursor-none  flex items-center w-full justify-center h-full">
         <div className="grayscale absolute top-0 w-full h-full items-center left-0 flex justify-center md:justify-start">
-          <div className=" text-center md:text-left text-red-500">
-            <h1 className="font-bold  text-4xl pb-4">{"Hi, I'm"}</h1>
-            <p className="text-6xl md:text-8xl  ">Innocent Masuki</p>
-            <p className="md:text-xl mb-20 pb-8 ">
-              <span className="font-bold">freelance </span>
-              <span className="font-bold">web</span> and{" "}
-              <span className="font-bold">mobile</span> developer.
-            </p>
-          </div>
-          <div className=" hidden md:block opacity-70">
-            <Image
-              src={"/images/innocent.png"}
-              alt="Innocent Masuki Background"
-              height="500"
-              width="500"
-            />
-          </div>
+          <HeroTexts />
+          <InnocentImage />
         </div>
         <div
           ref={colorRef}
@@ -66,23 +53,8 @@ export default function HomePage() {
           }}
           className="box absolute top-0 w-full h-full items-center left-0 flex justify-center md:justify-start"
         >
-          <div className=" text-center md:text-left text-red-500">
-            <h1 className="font-bold  text-4xl pb-4">{"Hi, I'm"}</h1>
-            <p className="text-6xl md:text-8xl  ">Innocent Masuki</p>
-            <p className="md:text-xl mb-20 pb-8 ">
-              <span className="font-bold">freelance </span>
-              <span className="font-bold">web</span> and{" "}
-              <span className="font-bold">mobile</span> developer.
-            </p>
-          </div>
-          <div className=" hidden md:block opacity-70">
-            <Image
-              src={"/images/innocent.png"}
-              alt="Innocent Masuki Background"
-              height="500"
-              width="500"
-            />
-          </div>
+          <HeroTexts />
+          <InnocentImage />
         </div>
         <div
           ref={cursorRef}
