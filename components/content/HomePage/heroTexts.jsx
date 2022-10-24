@@ -1,6 +1,6 @@
 export default function HeroTexts() {
   return (
-    <div className=" text-center md:text-left text-red-500">
+    <div className=" text-center z-30 md:relative md:text-left text-red-500">
       <h1 className="font-bold  text-4xl pb-4">{"Hi, I'm"}</h1>
       <p className="text-6xl md:text-8xl  ">Innocent Masuki</p>
       <p className="md:text-xl mb-20 pb-8 ">

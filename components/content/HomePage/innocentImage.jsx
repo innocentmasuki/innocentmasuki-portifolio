@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function InnocentImage() {
   return (
-    <div className=" hidden md:block opacity-70">
+    <div className="absolute opacity-5 md:mx-10  md:block md:opacity-70">
       <Image
         src={"/images/innocent.png"}
         alt="Innocent Masuki Background"
