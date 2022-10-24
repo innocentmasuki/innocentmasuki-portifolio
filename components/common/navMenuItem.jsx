@@ -7,7 +7,7 @@ function NavMenuItem({ title, path }) {
       <div className="duration-170  pt-3 cursor-pointer">
         <div
           className={
-            router.pathname === path ? "  text-black " : "  text-gray-500 "
+            router.pathname === path ? "  text-red-500 " : "  text-gray-500 "
           }
         >
           {title}
@@ -15,7 +15,7 @@ function NavMenuItem({ title, path }) {
         <div
           className={`text-center leading-0 font-bold ${
             router.pathname === path
-              ? " visible text-black "
+              ? " visible text-red-500 "
               : " invisible text-gray-500 "
           } text-2xl`}
         >
