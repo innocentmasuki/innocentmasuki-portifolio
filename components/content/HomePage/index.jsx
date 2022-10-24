@@ -58,7 +58,7 @@ export default function HomePage() {
         </div>
         <div
           ref={cursorRef}
-          className="absolute  h-72 w-72 rounded-full border-2 border-red-500"
+          className="absolute  h-72 w-72 lg:-top-96 lg:-left-96 rounded-full border-2 border-red-500"
         ></div>
       </div>
       <Script onLoad={() => {}} />
