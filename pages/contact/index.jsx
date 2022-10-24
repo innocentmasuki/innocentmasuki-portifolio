@@ -90,7 +90,7 @@ function Contact() {
                       rel="noreferrer"
                       key={index}
                       href={media.link}
-                      className="hover:underline"
+                      className="hover:underline text-red-500"
                     >
                       {media.title}
                     </a>
