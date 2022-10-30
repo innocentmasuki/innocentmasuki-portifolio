@@ -1,12 +1,12 @@
 import Head from "next/head";
 
-import Layout from "../../components/layout";
-import Heading from "../../components/common/heading";
-import Paragraph from "../../components/common/paragraph";
-import Button from "../../components/common/button";
-import Skill from "../../components/content/skill";
+import Layout from "@/components/layout";
+import Heading from "@/components/common/heading";
+import Paragraph from "@/components/common/paragraph";
+import Button from "@/components/common/button";
+import Skill from "@/components/content/skill";
 
-import data from "../../components/utils";
+import data from "@/components/utils";
 
 function About() {
   return (

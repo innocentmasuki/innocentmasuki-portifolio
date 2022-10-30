@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 
-import Layout from "../../components/layout";
+import Layout from "@/components/layout";
 
-import Input from "../../components/common/input";
-import TextArea from "../../components/common/textarea";
-import Heading from "../../components/common/heading";
-import Paragraph from "../../components/common/paragraph";
+import Input from "@/components/common/input";
+import TextArea from "@/components/common/textarea";
+import Heading from "@/components/common/heading";
+import Paragraph from "@/components/common/paragraph";
 
-import data from "../../components/utils";
+import data from "@/components/utils";
 
 function Contact() {
   const [full_name, setFull_name] = useState("");
