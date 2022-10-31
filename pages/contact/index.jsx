@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 
-import Layout from "@/components/layout";
+import RootLayout from "@/components/rootLayout";
 
 import Input from "@/components/common/input";
 import TextArea from "@/components/common/textarea";
@@ -71,17 +71,17 @@ function Contact() {
       <Head>
         <title>i.me | Contact</title>
       </Head>
-      <Layout>
-        <div className="flex justify-start flex-wrap">
+      <RootLayout>
+        <div className="flex items-center h-full justify-start flex-wrap">
           <div className="w-full md:w-1/2">
             <div className="flex  items-center justify-center h-full">
               <div>
                 <Heading text={"Let's talk"} className="text-left" />
                 <Paragraph
                   text={
-                    "Get in touch, let us discuss your project and start implementing it!"
+                    "Get in touch, let us discuss your project and get the job done!"
                   }
-                  className={"py-10"}
+                  className={"py-10  md:pr-10 "}
                 />
                 <div className="flex justify-start gap-4 mb-10">
                   {data.mediaData.medias.map((media, index) => (
@@ -100,7 +100,7 @@ function Contact() {
             </div>
           </div>
           <div className="w-full md:w-1/2 md:p-5">
-            <div className="bg-gray-700  p-10">
+            <div className="bg-gray-700 rounded-2xl p-10">
               <form>
                 <Input
                   type="text"
@@ -145,7 +145,7 @@ function Contact() {
                   onDataChange={(e) => {
                     setProject(e.target.value);
                   }}
-                  rows={5}
+                  rows={4}
                 />
                 <div className="flex justify-end">
                   <button
@@ -155,8 +155,9 @@ function Contact() {
                     }}
                     className={
                       submitted
-                        ? "bg-transparent  disabled:bg-gray-500 disabled:border-gray-500 disabled:text-gray-700 hover:bg-green-500 duration-200 border-green-500 border-2 cursor-pointer hover:text-white text-green-500 px-4 py-2"
-                        : "bg-transparent  disabled:bg-gray-500 disabled:border-gray-500 disabled:text-gray-700 hover:bg-white duration-200 border-white border-2 cursor-pointer hover:text-gray-500 text-white px-4 py-2"
+                        ? " hover:bg-green-500  border-green-500   hover:text-white text-green-500 "
+                        : " hover:bg-white  border-white   hover:text-gray-500 text-white " +
+                          " bg-transparent duration-200 cursor-pointer rounded-2xl border-2 disabled:bg-gray-500 px-4 py-2 disabled:border-gray-500 disabled:text-gray-700"
                     }
                   >
                     {submitting ? "Sending..." : submitted ? "Sent " : "Send"}
@@ -166,7 +167,7 @@ function Contact() {
             </div>
           </div>
         </div>
-      </Layout>
+      </RootLayout>
     </>
   );
 }
