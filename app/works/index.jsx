@@ -1,4 +1,4 @@
-import RootLayout from "@/components/rootLayout";
+import RootLayout from "../../components/rootLayout";
 import Head from "next/head";
 
 function Works() {

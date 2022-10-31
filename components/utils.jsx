@@ -87,7 +87,7 @@ const mediaData = {
     },
     {
       title: "GitHub",
-      link: "https://github.com/Diggerati",
+      link: "https://github.com/innocentmasuki",
     },
     {
       title: "Dribbble",
