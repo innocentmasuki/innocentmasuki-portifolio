@@ -81,6 +81,22 @@ function Works() {
                     objectFit="cover"
                   />
                 </SwiperSlide>
+                <SwiperSlide>
+                  <Image
+                    src={"/images/shoez.jpeg"}
+                    layout="fill"
+                    priority
+                    objectFit="cover"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image
+                    src={"/images/shoe.jpeg"}
+                    layout="fill"
+                    priority
+                    objectFit="cover"
+                  />
+                </SwiperSlide>
               </Swiper>
             </div>
             <div className="m-1 p-2 bg-gray-300 rounded-xl">
