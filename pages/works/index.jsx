@@ -111,7 +111,7 @@ function Works() {
                   >
                     <AiOutlineEye className="text-gray-700 text-2xl group-hover:text-white duration-200" />
                   </div>
-                  <span class="pointer-events-none z-20 text-white text-xs bg-gray-700 p-1 rounded absolute -top-7 left-0 w-max opacity-0 transition-opacity group-hover:opacity-100">
+                  <span className="pointer-events-none z-20 text-white text-xs bg-gray-700 p-1 rounded absolute -top-7 left-0 w-max opacity-0 transition-opacity group-hover:opacity-100">
                     Preview work
                   </span>
                 </div>
@@ -125,7 +125,7 @@ function Works() {
                       <FiArrowUpRight className="text-gray-700 text-2xl group-hover:text-white duration-200" />
                     </div>
                   </a>
-                  <span class="pointer-events-none z-20 text-white text-xs bg-gray-700 p-1 rounded absolute -top-7 left-0 w-max opacity-0 transition-opacity group-hover:opacity-100">
+                  <span className="pointer-events-none z-20 text-white text-xs bg-gray-700 p-1 rounded absolute -top-7 left-0 w-max opacity-0 transition-opacity group-hover:opacity-100">
                     Open
                   </span>
                 </div>
