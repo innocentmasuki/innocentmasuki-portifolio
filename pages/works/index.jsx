@@ -19,7 +19,7 @@ import useImageColor from "use-image-color";
 import Modal from "@/components/common/modal";
 
 function Works() {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [iframeUrl, setIframeUrl] = useState("");
   const toggelModal = () => {
     isModalOpen ? setIsModalOpen(false) : setIsModalOpen(true);
