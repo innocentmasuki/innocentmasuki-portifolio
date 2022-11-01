@@ -5,13 +5,10 @@ import Heading from "@/components/common/heading";
 import Paragraph from "@/components/common/paragraph";
 import Button from "@/components/common/button";
 import Skill from "@/components/content/skill";
-
 import SideNav from "@/components/content/SideNav";
-
 import data from "@/components/utils";
 
-import { useEffect, useState } from "react";
-
+import { useState } from "react";
 import { useWindowSize } from "hooks/useWindowSize";
 
 function About() {
@@ -63,7 +60,8 @@ const WhoAmI = ({ data }) => {
   return (
     <div>
       <Heading text={"Who am I?"} className="block md:hidden md:text-center" />
-      <Paragraph text={data.aboutMe.bio} className="md:text-center" />
+      <Paragraph text={"I'm Innocent Masuki."} className="md:text-center" />
+      <Paragraph text={data.aboutMe.bio} className="md:text-center mb-4" />
       <div className="md:flex md:justify-center">
         <Button
           a={true}

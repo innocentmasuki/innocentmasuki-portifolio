@@ -22,3 +22,33 @@
 .home-link {
     cursor: pointer;
 }
+
+.swiper-pagination > .swiper-pagination-bullet {
+opacity: 0.4;
+background: #FFF!important;
+}
+
+.swiper-pagination > .swiper-pagination-bullet-active {
+background: white!important;
+opacity: 1;
+}
+
+
+.modal-iframe-container{
+    height: 550px;
+    width: 760px;
+    overflow: scroll;
+}
+.modal-iframe{
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-iframe-container {
+        width: 350px;
+    }
+  }
+
+

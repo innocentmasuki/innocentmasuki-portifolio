@@ -14,7 +14,10 @@
     "nodemailer": "^6.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.6.0"
+    "react-icons": "^4.6.0",
+    "react-iframe": "^1.8.5",
+    "swiper": "^8.4.4",
+    "use-image-color": "^0.0.9"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
