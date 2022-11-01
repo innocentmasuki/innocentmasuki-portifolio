@@ -5,13 +5,10 @@ import Heading from "@/components/common/heading";
 import Paragraph from "@/components/common/paragraph";
 import Button from "@/components/common/button";
 import Skill from "@/components/content/skill";
-
 import SideNav from "@/components/content/SideNav";
-
 import data from "@/components/utils";
 
 import { useState } from "react";
-
 import { useWindowSize } from "hooks/useWindowSize";
 
 function About() {
