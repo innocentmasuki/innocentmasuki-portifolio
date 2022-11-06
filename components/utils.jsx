@@ -116,14 +116,49 @@ const navMenuRoutes = [
 ];
 
 const aboutMe = {
-  bio: "I am a software developer working productively in dynamic environments. Much interested in web and mobile app development. Proud team player focused on achieving project objectives with speed and accuracy.",
+  bio: "I am a software developer working productively in dynamic environments. Much interested in mobile and front-end development. Proud team player focused on achieving project objectives with speed and accuracy.",
   hobbies: "video games,movies,drawing,animations",
 };
+
+const works = [
+  {
+    title: "New Age Animations",
+    banners: [
+      {
+        url: "https://innocentmasuki.github.io/portfolio-assets/images/banners/naa/new_age_animations.png",
+        alt: "New age animation website banner",
+      },
+    ],
+    url: "https://newageanimations.com/",
+    details:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    title: "Mr Raha",
+    banners: [
+      {
+        url: "https://innocentmasuki.github.io/portfolio-assets/images/banners/mrraha/mr_raha.png",
+        alt: "Mr raha website banner",
+      },
+    ],
+    url: "https://mrraha.co.tz/",
+    details:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    title: "Meniscus Techonologies",
+    banners: [],
+    url: "https://meniscus.co/",
+    details:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+];
 
 const data = {
   mediaData,
   navMenuRoutes,
   aboutMe,
+  works,
   skills,
 };
 
