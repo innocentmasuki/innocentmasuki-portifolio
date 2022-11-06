@@ -46,8 +46,8 @@ const WorkItem = ({ work, setIframeUrl, toggelModal }) => {
             className="relative h-52 w-full rounded-2xl group-hover/work:rounded-b-none overflow-hidden"
           >
             {work.banners.length > 0 ? (
-              work.banners.map((banner) => (
-                <SwiperSlide>
+              work.banners.map((banner, index) => (
+                <SwiperSlide key={index}>
                   <Image
                     src={banner.url}
                     alt={banner.alt}
