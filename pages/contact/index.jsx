@@ -10,6 +10,8 @@ import Paragraph from "@/components/common/paragraph";
 
 import data from "@/components/utils";
 
+import { PopupButton } from "react-calendly";
+
 function Contact() {
   const [full_name, setFull_name] = useState("");
   const [email, setEmail] = useState("");
@@ -19,6 +21,7 @@ function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [disabled, setDisabled] = useState(true);
+  const [showWidget, setShowWidget] = useState(false);
 
   function saySent() {
     setSubmitted(true);
@@ -66,13 +69,23 @@ function Contact() {
     });
   };
 
+  useEffect(() => {
+    setTimeout(function () {
+      setShowWidget(true);
+    }, 300);
+  }, []);
+
   return (
     <>
       <Head>
         <title>i.me | Contact</title>
       </Head>
+
       <RootLayout>
-        <div className="flex items-center h-full justify-start flex-wrap">
+        <div
+          id="contact-root"
+          className="flex items-center h-full justify-start flex-wrap"
+        >
           <div className="w-full md:w-1/2">
             <div className="flex  items-center justify-center h-full">
               <div>
@@ -83,6 +96,16 @@ function Contact() {
                   }
                   className={"py-10  md:pr-10 "}
                 />
+                {showWidget && (
+                  <div className="text-red-500 hover:underline">
+                    <PopupButton
+                      url="https://calendly.com/innocentmasuki/lets-talk"
+                      rootElement={document.getElementById("contact-root")}
+                      text="Schedule Appointment"
+                      className="mb-32"
+                    />
+                  </div>
+                )}
                 <div className="flex justify-start gap-4 mb-10">
                   {data.mediaData.medias.map((media, index) => (
                     <a
