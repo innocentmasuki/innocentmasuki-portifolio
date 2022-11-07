@@ -34,7 +34,7 @@ function Works() {
           <Heading text={"Works & Projects"} className="md:text-center " />
           <Paragraph
             text={
-              "This is the list of projects and works I have been working on for the past years up to now."
+              "This is the list of projects and works I have been working and collaborating on for the past years up to now."
             }
             className="md:text-center"
           />

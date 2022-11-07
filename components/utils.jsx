@@ -15,6 +15,9 @@ import {
   SiNextdotjs,
 } from "react-icons/si";
 
+const baseurl =
+  "https://innocentmasuki.github.io/portfolio-assets/images/banners";
+
 const skills = [
   {
     title: "Android Dev",
@@ -125,7 +128,11 @@ const works = [
     title: "New Age Animations",
     banners: [
       {
-        url: "https://innocentmasuki.github.io/portfolio-assets/images/banners/naa/new_age_animations.png",
+        url: baseurl + "/naa/cover.png",
+        alt: "New age animation cover",
+      },
+      {
+        url: baseurl + "/naa/first.png",
         alt: "New age animation website banner",
       },
     ],
@@ -137,8 +144,12 @@ const works = [
     title: "Mr Raha",
     banners: [
       {
-        url: "https://innocentmasuki.github.io/portfolio-assets/images/banners/mrraha/mr_raha.png",
-        alt: "Mr raha website banner",
+        url: baseurl + "/mrraha/cover.png",
+        alt: "Mr. raha cover",
+      },
+      {
+        url: baseurl + "/mrraha/first.png",
+        alt: "Mr. raha website banner",
       },
     ],
     url: "https://mrraha.co.tz/",
@@ -147,8 +158,49 @@ const works = [
   },
   {
     title: "Meniscus Techonologies",
-    banners: [],
+    banners: [
+      {
+        url: baseurl + "/meniscus/cover.png",
+        alt: "Meniscus cover",
+      },
+      {
+        url: baseurl + "/meniscus/first.png",
+        alt: "Meniscus website banner",
+      },
+    ],
     url: "https://meniscus.co/",
+    details:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    title: "Afyacall",
+    banners: [
+      {
+        url: baseurl + "/afyacall/cover.png",
+        alt: "Afyacall cover",
+      },
+      {
+        url: baseurl + "/afyacall/first.png",
+        alt: "Afyacall website banner",
+      },
+    ],
+    url: "https://afyacall.co/tz",
+    details:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    title: "This Website",
+    banners: [
+      {
+        url: baseurl + "/innocentmasuki/cover.png",
+        alt: "innocent masuki portifolio website cover",
+      },
+      {
+        url: baseurl + "/innocentmasuki/first.png",
+        alt: "innocent masuki portifolio website banner",
+      },
+    ],
+    url: "https://innocentmasuki.me",
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
   },

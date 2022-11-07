@@ -24,19 +24,20 @@
 }
 
 .swiper-pagination > .swiper-pagination-bullet {
-opacity: 0.4;
-background: #FFF!important;
+opacity: 1 ;
+box-shadow: 0 0 1px black!important;
+background: #ffffff!important;
 }
 
 .swiper-pagination > .swiper-pagination-bullet-active {
-background: white!important;
+background: #374151!important;
 opacity: 1;
 }
 
 
 .modal-iframe-container{
-    height: 550px;
-    width: 760px;
+    height: 650px;
+    width: 1000px;
     overflow: scroll;
 }
 .modal-iframe{
@@ -48,7 +49,10 @@ opacity: 1;
 @media screen and (max-width: 768px) {
     .modal-iframe-container {
         width: 350px;
+        height: 550px;
     }
   }
+
+
 
 

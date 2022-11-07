@@ -43,7 +43,7 @@ const WorkItem = ({ work, setIframeUrl, toggelModal }) => {
             }}
             grabCursor={true}
             modules={[Pagination]}
-            className="relative h-52 w-full rounded-2xl group-hover/work:rounded-b-none overflow-hidden"
+            className="relative aspect-[3/2] w-full rounded-2xl group-hover/work:rounded-b-none overflow-hidden"
           >
             {work.banners.length > 0 ? (
               work.banners.map((banner, index) => (
