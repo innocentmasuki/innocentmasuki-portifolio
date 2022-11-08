@@ -18,6 +18,9 @@ import { BsChevronUp } from "react-icons/bs";
 
 import { useState } from "react";
 
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
 const WorkItem = ({ work, setIframeUrl, toggelModal }) => {
   const [showDetails, setShowDetails] = useState(false);
 
@@ -115,8 +118,10 @@ const WorkItem = ({ work, setIframeUrl, toggelModal }) => {
             </div>
           </div>
           {showDetails && (
-            <div className="w-full p-2 rounded-tr-lg rounded-b-lg bg-gray-200">
-              {work.details}
+            <div className="w-full reactMarkDown p-2 rounded-tr-lg rounded-b-lg bg-gray-200">
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {work.details}
+              </ReactMarkdown>
             </div>
           )}
         </div>

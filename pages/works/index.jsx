@@ -70,7 +70,11 @@ function ModalContent({ url }) {
           to open the dynamic page.
         </span>
       </div>
-      <iframe src={url} className="modal-iframe rounded-2xl"></iframe>
+      <iframe
+        src={url}
+        allow={`accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;`}
+        className="modal-iframe rounded-2xl"
+      ></iframe>
     </div>
   );
 }
