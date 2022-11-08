@@ -79,7 +79,11 @@ const WorkItemsLayout = ({ works, setIframeUrl, toggelModal }) => {
                 (work, index) =>
                   start === index % 4 && (
                     <div className="w-full" key={index}>
-                      <WorkItem work={work} />
+                      <WorkItem
+                        work={work}
+                        setIframeUrl={(url) => setIframeUrl(url)}
+                        toggelModal={() => toggelModal()}
+                      />
                     </div>
                   )
               )}
