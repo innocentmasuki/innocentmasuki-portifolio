@@ -119,10 +119,9 @@ const WorkItem = ({ work, setIframeUrl, toggelModal }) => {
           </div>
           {showDetails && (
             <div className="w-full reactMarkDown p-2 rounded-tr-lg rounded-b-lg bg-gray-200">
-              <ReactMarkdown
-                children={work.details}
-                remarkPlugins={[remarkGfm]}
-              />
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {work.details}
+              </ReactMarkdown>
             </div>
           )}
         </div>
