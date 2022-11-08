@@ -9,6 +9,7 @@ import Paragraph from "@/components/common/paragraph";
 
 import WorkItem from "@/components/content/WorkItem";
 import data from "@/components/utils";
+import WorkItemsLayout from "@/components/content/WorkItemsLayout";
 
 function Works() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,16 +40,8 @@ function Works() {
             className="md:text-center"
           />
         </div>
-        <div className="grid py-10 gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {data.works.map((work, index) => (
-            <WorkItem
-              key={index}
-              work={work}
-              setIframeUrl={(url) => setIframeUrl(url)}
-              toggelModal={() => toggelModal()}
-            />
-          ))}
-        </div>
+
+        <WorkItemsLayout works={data.works} />
       </RootLayout>
     </>
   );
