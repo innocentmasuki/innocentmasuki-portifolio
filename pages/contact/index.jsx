@@ -101,7 +101,7 @@ function Contact() {
                     url="https://calendly.com/innocentmasuki/lets-talk"
                     rootElement={document.getElementById("contact-root")}
                     text="Schedule an appointment"
-                    className="my-8 bg-red-50 py-3 px-4 rounded-2xl text-red-500"
+                    className="my-8 bg-red-50 hover:bg-red-100 py-3 px-4 rounded-2xl text-red-500 hover:text-red-600"
                   />
                 )}
                 <div className="flex justify-start gap-4 mb-10">
