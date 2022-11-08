@@ -77,7 +77,7 @@ const WhoAmI = ({ data }) => {
             url="https://calendly.com/innocentmasuki/lets-talk"
             rootElement={document.getElementById("contact-root")}
             text="Schedule an appointment"
-            className=" bg-red-50 py-3 px-4 rounded-2xl text-red-500"
+            className=" bg-red-50 py-3 px-4 rounded-2xl text-red-500 hover:text-red-600 hover:bg-red-100"
           />
         )}
         <Button
