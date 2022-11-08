@@ -198,7 +198,7 @@ const works = [
     ],
     url: "https://afyacall.co/tz",
     details:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "An official website for **AfyaCall**. A mobile health service that allows people using any type of mobile phone to speak to the doctor, and gain access to medical services and consultations. Created with [ReactJS](https://reactjs.org/).",
   },
   {
     title: "This Website",
@@ -214,7 +214,7 @@ const works = [
     ],
     url: "https://innocentmasuki.me",
     details:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "This personal portfolio website. Created with [NextJS](https://nextjs.org/) source codes are available at [GitHub](https://github.com/innocentmasuki/innocentmasuki-portifolio)",
   },
 ];
 
