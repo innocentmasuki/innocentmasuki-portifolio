@@ -5,7 +5,7 @@ const WorkItemsLayout = ({ works }) => {
   const width = useWindowSize().width;
 
   return (
-    <div className="flex flex-row gap-4">
+    <div className="flex flex-row gap-4 my-10">
       {width < 768 && (
         <div className="flex flex-col gap-4 w-full">
           {works.map((work, index) => (
