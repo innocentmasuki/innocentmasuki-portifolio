@@ -216,6 +216,22 @@ const works = [
     details:
       "This personal portfolio website. Created with [NextJS](https://nextjs.org/) source codes are available at [GitHub](https://github.com/innocentmasuki/innocentmasuki-portifolio)",
   },
+  {
+    title: "Kibegi Shop",
+    banners: [
+      {
+        url: baseurl + "/kibegi/cover.png",
+        alt: "Kibegi Shop app cover",
+      },
+      {
+        url: baseurl + "/kibegi/first.png",
+        alt: "Kibegi Shop app banner",
+      },
+    ],
+    url: null,
+    details:
+      "Android shopping app created with [Java](https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html). Source codes are available at [GitHub](https://github.com/meniscusInc/Kibegi)",
+  },
 ];
 
 const data = {
