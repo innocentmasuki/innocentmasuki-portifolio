@@ -1,7 +1,7 @@
 import { useWindowSize } from "hooks/useWindowSize";
 import WorkItem from "../WorkItem";
 
-const WorkItemsLayout = ({ works }) => {
+const WorkItemsLayout = ({ works, setIframeUrl, toggelModal }) => {
   const width = useWindowSize().width;
 
   return (
@@ -10,7 +10,11 @@ const WorkItemsLayout = ({ works }) => {
         <div className="flex flex-col gap-4 w-full">
           {works.map((work, index) => (
             <div className="w-full" key={index}>
-              <WorkItem work={work} />
+              <WorkItem
+                work={work}
+                setIframeUrl={(url) => setIframeUrl(url)}
+                toggelModal={() => toggelModal()}
+              />
             </div>
           ))}
         </div>
@@ -18,12 +22,20 @@ const WorkItemsLayout = ({ works }) => {
       {width >= 768 && width < 1024 && (
         <>
           {[0, 1].map((start, index) => (
-            <div key={index} className="flex flex-col gap-4 w-1/2">
+            <div
+              key={index}
+              style={{ width: "calc(50% - 8px)" }}
+              className="flex flex-col gap-4"
+            >
               {works.map(
                 (work, index) =>
                   start === index % 2 && (
                     <div className="w-full" key={index}>
-                      <WorkItem work={work} />
+                      <WorkItem
+                        work={work}
+                        setIframeUrl={(url) => setIframeUrl(url)}
+                        toggelModal={() => toggelModal()}
+                      />
                     </div>
                   )
               )}
@@ -34,12 +46,20 @@ const WorkItemsLayout = ({ works }) => {
       {width >= 1024 && width < 1280 && (
         <>
           {[0, 1, 2].map((start, index) => (
-            <div key={index} className="flex flex-col gap-4 w-1/3">
+            <div
+              key={index}
+              style={{ width: "calc(33.33333% - 10.5px)" }}
+              className="flex flex-col gap-4"
+            >
               {works.map(
                 (work, index) =>
                   start === index % 3 && (
                     <div className="w-full" key={index}>
-                      <WorkItem work={work} />
+                      <WorkItem
+                        work={work}
+                        setIframeUrl={(url) => setIframeUrl(url)}
+                        toggelModal={() => toggelModal()}
+                      />
                     </div>
                   )
               )}
@@ -50,12 +70,20 @@ const WorkItemsLayout = ({ works }) => {
       {width >= 1280 && (
         <>
           {[0, 1, 2, 3].map((start, index) => (
-            <div key={index} className="flex flex-col gap-4 w-1/4">
+            <div
+              key={index}
+              style={{ width: "calc(25% - 12px)" }}
+              className="flex flex-col gap-4 "
+            >
               {works.map(
                 (work, index) =>
                   start === index % 4 && (
                     <div className="w-full" key={index}>
-                      <WorkItem work={work} />
+                      <WorkItem
+                        work={work}
+                        setIframeUrl={(url) => setIframeUrl(url)}
+                        toggelModal={() => toggelModal()}
+                      />
                     </div>
                   )
               )}

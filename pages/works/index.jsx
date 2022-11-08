@@ -7,7 +7,6 @@ import Modal from "@/components/common/modal";
 import Heading from "@/components/common/heading";
 import Paragraph from "@/components/common/paragraph";
 
-import WorkItem from "@/components/content/WorkItem";
 import data from "@/components/utils";
 import WorkItemsLayout from "@/components/content/WorkItemsLayout";
 
@@ -41,7 +40,11 @@ function Works() {
           />
         </div>
 
-        <WorkItemsLayout works={data.works} />
+        <WorkItemsLayout
+          works={data.works}
+          setIframeUrl={(url) => setIframeUrl(url)}
+          toggelModal={() => toggelModal()}
+        />
       </RootLayout>
     </>
   );
