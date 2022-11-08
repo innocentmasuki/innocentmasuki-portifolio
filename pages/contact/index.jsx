@@ -94,17 +94,15 @@ function Contact() {
                   text={
                     "Get in touch, let us discuss your project and get the job done!"
                   }
-                  className={"py-10  md:pr-10 "}
+                  className={"pt-10 pb-5 md:pr-10 "}
                 />
                 {showWidget && (
-                  <div className="text-red-500 hover:underline">
-                    <PopupButton
-                      url="https://calendly.com/innocentmasuki/lets-talk"
-                      rootElement={document.getElementById("contact-root")}
-                      text="Schedule Appointment"
-                      className="mb-32"
-                    />
-                  </div>
+                  <PopupButton
+                    url="https://calendly.com/innocentmasuki/lets-talk"
+                    rootElement={document.getElementById("contact-root")}
+                    text="Schedule an appointment"
+                    className="my-8 bg-red-50 py-3 px-4 rounded-2xl text-red-500"
+                  />
                 )}
                 <div className="flex justify-start gap-4 mb-10">
                   {data.mediaData.medias.map((media, index) => (

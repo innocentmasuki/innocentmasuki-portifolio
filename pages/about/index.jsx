@@ -7,12 +7,14 @@ import Button from "@/components/common/button";
 import Skill from "@/components/content/skill";
 import SideNav from "@/components/content/SideNav";
 import data from "@/components/utils";
+import { PopupButton } from "react-calendly";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useWindowSize } from "hooks/useWindowSize";
 
 function About() {
   const [activeTab, setActiveTab] = useState(1);
+
   const size = useWindowSize();
   const [sideMenuTitles] = useState(["Who am I?", "Hobbies", "Skills & Tools"]);
 
@@ -57,15 +59,30 @@ function About() {
 export default About;
 
 const WhoAmI = ({ data }) => {
+  const [showWidget, setShowWidget] = useState(false);
+  useEffect(() => {
+    setTimeout(function () {
+      setShowWidget(true);
+    }, 300);
+  }, []);
+
   return (
     <div>
       <Heading text={"Who am I?"} className="block md:hidden md:text-center" />
       <Paragraph text={"I'm Innocent Masuki."} className="md:text-center" />
       <Paragraph text={data.aboutMe.bio} className="md:text-center mb-4" />
-      <div className="md:flex md:justify-center">
+      <div className="md:flex gap-4 md:justify-center">
+        {showWidget && (
+          <PopupButton
+            url="https://calendly.com/innocentmasuki/lets-talk"
+            rootElement={document.getElementById("contact-root")}
+            text="Schedule an appointment"
+            className=" bg-red-50 py-3 px-4 rounded-2xl text-red-500"
+          />
+        )}
         <Button
           a={true}
-          title={"My Resume"}
+          title={"My resume"}
           link={
             "https://docs.google.com/document/d/1AfhSLWntV1B-zvpPEygaJwGbHDQRTN7HQPoVbtmhn24/edit?usp=sharing"
           }
