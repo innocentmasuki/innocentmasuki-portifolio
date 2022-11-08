@@ -134,7 +134,7 @@ const works = [
     ],
     url: "https://woonbedrijf-test-wplatform.azurewebsites.net/",
     details:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "A website for **Woonbedrijf**. I collaborated with an amazing team from [Sukuma Pixel](https://sukumapixel.com/). Created with [NextJS](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/).",
   },
   {
     title: "New Age Animations",
@@ -150,7 +150,7 @@ const works = [
     ],
     url: "https://newageanimations.com/",
     details:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Official website for **New Age Animations**, A company creating 3D animations for entertainment 🎬. Created with [ReactJS](https://reactjs.org/), [Tailwindcss](https://tailwindcss.com/) and [ThreeJS](https://threejs.org/) technologies.",
   },
   {
     title: "Mr Raha",
@@ -166,7 +166,7 @@ const works = [
     ],
     url: "https://mrraha.co.tz/",
     details:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "An official website for **Mr Raha**. A digital chatbot using the Swahili language to provide user with contacts of the service provider(s) of the asked service. Created with [ReactJS](https://reactjs.org/).",
   },
   {
     title: "Meniscus Techonologies",
@@ -182,7 +182,7 @@ const works = [
     ],
     url: "https://meniscus.co/",
     details:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "An official website for **Meniscus Techlogies**, A software company based in Tanzania. Created with [ReactJS](https://reactjs.org/).",
   },
   {
     title: "Afyacall",

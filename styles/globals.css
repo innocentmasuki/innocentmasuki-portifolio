@@ -43,7 +43,7 @@ opacity: 1;
 .modal-iframe{
     height: 100%;
     width: 100%;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 @media screen and (max-width: 768px) {
@@ -53,3 +53,12 @@ opacity: 1;
     }
   }
 
+.reactMarkDown {
+    @apply text-gray-700
+}
+.reactMarkDown a{
+    @apply hover:underline text-red-500
+}
+.reactMarkDown strong{
+    @apply font-bold text-black
+}
