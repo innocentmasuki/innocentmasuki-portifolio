@@ -17,8 +17,8 @@ const WorkItemsLayout = ({ works }) => {
       )}
       {width >= 768 && width < 1024 && (
         <>
-          {[0, 1].map((start) => (
-            <div className="flex flex-col gap-4 w-1/2">
+          {[0, 1].map((start, index) => (
+            <div key={index} className="flex flex-col gap-4 w-1/2">
               {works.map(
                 (work, index) =>
                   start === index % 2 && (
@@ -33,8 +33,8 @@ const WorkItemsLayout = ({ works }) => {
       )}
       {width >= 1024 && width < 1280 && (
         <>
-          {[0, 1, 2].map((start) => (
-            <div className="flex flex-col gap-4 w-1/3">
+          {[0, 1, 2].map((start, index) => (
+            <div key={index} className="flex flex-col gap-4 w-1/3">
               {works.map(
                 (work, index) =>
                   start === index % 3 && (
@@ -49,8 +49,8 @@ const WorkItemsLayout = ({ works }) => {
       )}
       {width >= 1280 && (
         <>
-          {[0, 1, 2, 3].map((start) => (
-            <div className="flex flex-col gap-4 w-1/4">
+          {[0, 1, 2, 3].map((start, index) => (
+            <div key={index} className="flex flex-col gap-4 w-1/4">
               {works.map(
                 (work, index) =>
                   start === index % 4 && (
