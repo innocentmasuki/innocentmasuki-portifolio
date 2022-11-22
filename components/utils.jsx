@@ -132,9 +132,9 @@ const works = [
         alt: "W platform cover",
       },
     ],
-    url: "https://woonbedrijf-test-wplatform.azurewebsites.net/",
+    url: "https://wplatform.nl",
     details:
-      "A website for **Woonbedrijf**. I collaborated with an amazing team from [Sukuma Pixel](https://sukumapixel.com/). Created with [NextJS](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/).",
+      "A W-Magazine website for **Woonbedrijf**. I collaborated with an amazing team from [Sukuma Pixel](https://sukumapixel.com/). Created with [NextJS](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/).",
   },
   {
     title: "New Age Animations",
