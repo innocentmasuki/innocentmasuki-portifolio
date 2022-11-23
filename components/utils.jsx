@@ -86,7 +86,7 @@ const mediaData = {
   medias: [
     {
       title: "Twitter",
-      link: "https://twitter.com/MasukiInnocent",
+      link: "https://twitter.com/innocentmasuki",
     },
     {
       title: "GitHub",
