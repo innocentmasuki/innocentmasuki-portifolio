@@ -39,7 +39,6 @@ function Works() {
             className="md:text-center"
           />
         </div>
-
         <WorkItemsLayout
           works={data.works}
           setIframeUrl={(url) => setIframeUrl(url)}
