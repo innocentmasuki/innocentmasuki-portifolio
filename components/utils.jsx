@@ -82,7 +82,7 @@ const skills = [
 ];
 
 const mediaData = {
-  email: "innocentmasuki@meniscus.co",
+  email: "innocentmasuki99@gmail.com",
   medias: [
     {
       title: "Twitter",
