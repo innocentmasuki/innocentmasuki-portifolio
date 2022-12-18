@@ -3,10 +3,13 @@ import NavMenuItem from "./common/navMenuItem";
 import Footer from "./content/footer";
 
 import data from "./utils";
+import Snowfall from "react-snowfall";
 
 function RootLayout({ children }) {
   return (
-    <div className="flex font-visuelt flex-col h-screen">
+    <div className="flex relative font-visuelt flex-col h-screen">
+      <Snowfall />
+
       <nav className="w-full pb-2 px-4 md:px-10 lg:px-32 fixed top-0 z-50 left-0 bg-white  pt-4 flex justify-between">
         <Link href={"/"}>
           <span className="text-4xl font-sacramento home-link">
