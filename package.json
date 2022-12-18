@@ -17,6 +17,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
     "react-markdown": "^8.0.3",
+    "react-snowfall": "^1.2.1",
     "remark-gfm": "^3.0.1",
     "swiper": "^8.4.4"
   },
