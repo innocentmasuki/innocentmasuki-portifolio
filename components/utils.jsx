@@ -105,6 +105,10 @@ const navMenuRoutes = [
     path: "/",
   },
   {
+    title: "blog",
+    path: "/blog",
+  },
+  {
     title: "about",
     path: "/about",
   },

@@ -1,39 +1,51 @@
-require('dotenv').config()
-const PASSWORD = process.env.password
-const PASSWORD2 = process.env.password2
-const GMAIL = process.env.gmail
-const GMAIL_FROM = process.env.gmail_from
-const OUTLOOK_FROM = process.env.outlook_email
-const OUTLOOK_PASSWORD = process.env.outlook_password
+require("dotenv").config();
+const PASSWORD = process.env.password;
+const PASSWORD2 = process.env.password2;
+const GMAIL = process.env.gmail;
+const GMAIL_FROM = process.env.gmail_from;
+// const OUTLOOK_FROM = process.env.outlook_email;
+// const OUTLOOK_PASSWORD = process.env.outlook_password;
+import type { NextApiRequest, NextApiResponse } from "next";
 
-export default async function (req, res) {
-    let nodemailer = require('nodemailer')
-    const tranportInbox = nodemailer.createTransport({
-        port: 465,
-        host: "smtp.gmail.com",
-        auth: {
-          user: GMAIL_FROM,
-          pass: PASSWORD,
-        },
-        secure: true,
-      })
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  let nodemailer = require("nodemailer");
+  const tranportInbox = nodemailer.createTransport({
+    port: 465,
+    host: "smtp.gmail.com",
+    auth: {
+      user: GMAIL_FROM,
+      pass: PASSWORD,
+    },
+    secure: true,
+  });
 
-      const tranportOutbox = nodemailer.createTransport({
-        port: 465,
-        host: "smtp.gmail.com",
-        auth: {
-          user: GMAIL,
-          pass: PASSWORD2,
-        },
-        secure: true,
-      })
+  const tranportOutbox = nodemailer.createTransport({
+    port: 465,
+    host: "smtp.gmail.com",
+    auth: {
+      user: GMAIL,
+      pass: PASSWORD2,
+    },
+    secure: true,
+  });
 
-       const mailData = {
-        from: GMAIL_FROM,
-        to: GMAIL,
-        subject: `Message From ${req.body.full_name}`,
-        text: "Budget: " +req.body.budget + " | For project: " + req.body.project+ " | Sent from: " + req.body.email+ " | With phone: " + req.body.phone,
-        html: `
+  const mailData = {
+    from: GMAIL_FROM,
+    to: GMAIL,
+    subject: `Message From ${req.body.full_name}`,
+    text:
+      "Budget: " +
+      req.body.budget +
+      " | For project: " +
+      req.body.project +
+      " | Sent from: " +
+      req.body.email +
+      " | With phone: " +
+      req.body.phone,
+    html: `
         <div>
             <h1>Name: ${req.body.full_name}</h1>
             <ul>
@@ -44,18 +56,15 @@ export default async function (req, res) {
 
             </ul>
         </div>
-       `
-      }
+       `,
+  };
 
-
-
-
-      const fromInnocent = {
-        from: GMAIL,
-        to: req.body.email,
-        subject: `From Innocent, about your project: ${req.body.project}`,
-        text: `Hello ${req.body.full_name}, \n Thank you for visiting my website and leaving me a message. I have received your message about the project ${req.body.project}, I will reach you back within 48 hours from now to have an official talk about your message. \n Cheers, \n Innocent Masuki.`,
-        html: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  const fromInnocent = {
+    from: GMAIL,
+    to: req.body.email,
+    subject: `From Innocent, about your project: ${req.body.project}`,
+    text: `Hello ${req.body.full_name}, \n Thank you for visiting my website and leaving me a message. I have received your message about the project ${req.body.project}, I will reach you back within 48 hours from now to have an official talk about your message. \n Cheers, \n Innocent Masuki.`,
+    html: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <!--[if gte mso 9]>
@@ -228,7 +237,9 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
       <td style="overflow-wrap:break-word;word-break:break-word;padding:44px 10px 14px;font-family:'Cabin',sans-serif;" align="left">
 
   <div style="line-height: 140%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;"><span style="font-family: Cabin, sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 26px; line-height: 36.4px;"><strong><span style="line-height: 36.4px; font-size: 26px;">Hello ${req.body.full_name}</span></strong></span></span></p>
+    <p style="font-size: 14px; line-height: 140%;"><span style="font-family: Cabin, sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 26px; line-height: 36.4px;"><strong><span style="line-height: 36.4px; font-size: 26px;">Hello ${
+      req.body.full_name
+    }</span></strong></span></span></p>
   </div>
 
       </td>
@@ -242,7 +253,9 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
       <td style="overflow-wrap:break-word;word-break:break-word;padding:4px 55px 10px;font-family:'Cabin',sans-serif;" align="left">
 
   <div style="line-height: 170%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 170%;"><span style="font-family: Cabin, sans-serif; font-size: 18px; line-height: 30.6px;">Thank you for visiting my website and leaving me a message. I have received your message about the project ${req.body.project.length > 0 ? '"'+req.body.project+'"': ""}, I will contact you again within 48 hours from now for an official talk about your message.</span></p>
+    <p style="font-size: 14px; line-height: 170%;"><span style="font-family: Cabin, sans-serif; font-size: 18px; line-height: 30.6px;">Thank you for visiting my website and leaving me a message. I have received your message about the project ${
+      req.body.project.length > 0 ? '"' + req.body.project + '"' : ""
+    }, I will contact you again within 48 hours from now for an official talk about your message.</span></p>
   </div>
       </td>
     </tr>
@@ -388,26 +401,20 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
 
 </html>
 
-       `
-      }
+       `,
+  };
 
-      tranportInbox.sendMail(mailData, function (err, info) {
-        if(err)
-          console.log(err)
-        else
-          if(info.accepted[0] === GMAIL){
+  tranportInbox.sendMail(mailData, function (err, info) {
+    if (err) console.log(err);
+    else if (info.accepted[0] === GMAIL) {
+      tranportOutbox.sendMail(fromInnocent, function (err, info) {
+        if (err) {
+          console.log(err);
+          res.status(200).end();
+        } else res.status(200).end();
+      });
 
-            tranportOutbox.sendMail(fromInnocent, function (err, info) {
-              if(err)
-                {console.log(err)
-                res.status(200).end()}
-              else
-                res.status(200).end()
-            })
-
-            res.status(200).end()
-          }
-      })
-
-
-  }
+      res.status(200).end();
+    }
+  });
+}

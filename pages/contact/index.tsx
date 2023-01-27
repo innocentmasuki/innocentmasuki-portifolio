@@ -27,7 +27,7 @@ function Contact() {
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-    }, "2000");
+    }, 2000);
   }
 
   useEffect(() => {
