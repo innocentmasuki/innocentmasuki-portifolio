@@ -93,6 +93,15 @@ export interface Slug {
   _type: string;
   current: string;
 }
+export interface Category {
+  _createdAt: Date;
+  _id: string;
+  _rev: string;
+  _type: string;
+  _updatedAt: Date;
+  description: string;
+  title: string;
+}
 
 export interface BlogPost {
   _createdAt: Date;
@@ -102,7 +111,7 @@ export interface BlogPost {
   _updatedAt: Date;
   author: Author;
   body: Body[];
-  categories?: any;
+  categories?: Category[];
   mainImage: MainImage;
   slug: Slug;
   title: string;
