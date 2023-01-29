@@ -101,12 +101,12 @@ const mediaData = {
 
 const navMenuRoutes = [
   {
-    title: "home",
-    path: "/",
-  },
-  {
     title: "about",
     path: "/about",
+  },
+  {
+    title: "blog",
+    path: "/blog",
   },
   {
     title: "works",

@@ -20,7 +20,7 @@ function Works() {
   return (
     <>
       <Head>
-        <title>i.me | Works</title>
+        <title>Works | i.me</title>
       </Head>
       <RootLayout>
         {isModalOpen === true ? (
@@ -30,7 +30,7 @@ function Works() {
         ) : (
           ""
         )}
-        <div>
+        <div className="px-4 md:px-10 lg:px-32">
           <Heading text={"Works & Projects"} className="md:text-center " />
           <Paragraph
             text={
