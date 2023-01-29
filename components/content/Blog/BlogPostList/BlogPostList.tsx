@@ -124,15 +124,7 @@ export function BlogPostList({ posts, categories }: BlogPostListProps) {
             columnsCountBreakPoints={{ 350: 1, 767: 3, 1024: 4 }}
           >
             <Masonry>
-              {[
-                ...blogPosts,
-                ...blogPosts,
-                ...blogPosts,
-                ...blogPosts,
-                ...blogPosts,
-                ...blogPosts,
-                ...blogPosts,
-              ].map((blogPost: BlogPost, index: number) => (
+              {blogPosts.map((blogPost: BlogPost, index: number) => (
                 <BlogPostCard index={index} key={index} post={blogPost} />
               ))}
             </Masonry>
