@@ -5,7 +5,7 @@ const WorkItemsLayout = ({ works, setIframeUrl, toggelModal }) => {
   const width = useWindowSize().width;
 
   return (
-    <div className="flex flex-row gap-4 my-10">
+    <div className="flex px-4 md:px-10 lg:px-32 flex-row gap-4 my-10">
       {width < 768 && (
         <div className="flex flex-col gap-4 w-full">
           {works.map((work, index) => (

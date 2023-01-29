@@ -30,7 +30,7 @@ function Works() {
         ) : (
           ""
         )}
-        <div>
+        <div className="px-4 md:px-10 lg:px-32">
           <Heading text={"Works & Projects"} className="md:text-center " />
           <Paragraph
             text={

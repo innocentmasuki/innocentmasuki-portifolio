@@ -34,7 +34,7 @@ function RootLayout({ children }) {
           ))}
         </ul>
       </nav>
-      <main className="w-full px-4 md:px-10 lg:px-32 flex flex-grow">
+      <main className="w-full  flex flex-grow">
         <div className="w-full h-full py-20">{children}</div>
       </main>
       <Footer data={data.mediaData} />

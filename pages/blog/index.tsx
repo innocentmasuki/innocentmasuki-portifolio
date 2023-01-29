@@ -6,7 +6,7 @@ import { BlogPostList } from "@/components/content/Blog/BlogPostList";
 import { client } from "lib/sanity.client";
 import groq from "groq";
 
-const PreviewBlogPost = lazy(
+const PreviewBlogPostList = lazy(
   () => import("@/components/content/Blog/PreviewBlogPostList")
 );
 
@@ -19,7 +19,7 @@ export default function Blog({ preview, posts, categories }) {
         </Head>
         <RootLayout>
           <PreviewSuspense fallback="Loading...">
-            <PreviewBlogPost />
+            <PreviewBlogPostList />
           </PreviewSuspense>
         </RootLayout>
       </>
@@ -38,29 +38,13 @@ export default function Blog({ preview, posts, categories }) {
   );
 }
 
-export const getStaticProps = async ({ preview = false, params }) => {
-  const category = params?.category;
-
-  // const postsQuery = groq` *[_type=="post"&& categories.slug.current == "${category}"]{
-  //   ...,
-  //   author->,
-  //   categories[]->
-  // } | order(_createdAt desc)
-  // `;
-
-  const postsQuery = category
-    ? groq` *[_type=="post"&& categories.slug.current == "${category}"]{
-  ...,
-  author->,
-  categories[]->
-} | order(_createdAt desc)
-`
-    : groq` *[_type=="post"]{
-  ...,
-  author->,
-  categories[]->
-} | order(_createdAt desc)
-`;
+export const getServerSideProps = async ({ preview = false, params }) => {
+  const postsQuery = groq` *[_type=="post"]{
+    ...,
+    author->,
+    categories[]->
+  } | order(_createdAt desc)
+  `;
 
   const categoriesQuery = groq` *[_type=="category"]{
   ...,
@@ -72,18 +56,6 @@ export const getStaticProps = async ({ preview = false, params }) => {
 
   let posts = await client.fetch(postsQuery);
   const categories = await client.fetch(categoriesQuery);
-  const filterByCategory = async (selectedCategory: string) => {
-    const query = groq`*[_type == "post" && category == $category]{
-      ...,
-    author->,
-    categories[]->
-    }| order(_createdAt desc)
-    `;
-
-    posts = await client.fetch(query, {
-      category: selectedCategory,
-    });
-  };
 
   return { props: { preview, posts, categories } };
 };

@@ -24,7 +24,7 @@ function About() {
         <title>i.me | About</title>
       </Head>
       <RootLayout>
-        <div className="w-full h-full  grid grid-cols-1  md:grid-cols-3">
+        <div className="w-full h-full px-4 md:px-10 lg:px-32 grid grid-cols-1  md:grid-cols-3">
           <div className="hidden md:block top-20">
             <SideNav
               sideMenuTitles={sideMenuTitles}
@@ -77,7 +77,7 @@ const WhoAmI = ({ data }) => {
             url="https://calendly.com/innocentmasuki/lets-talk"
             rootElement={document.getElementById("about-root")}
             text="Schedule an appointment"
-            className=" bg-red-50 py-3 my-2 px-4 rounded-2xl text-red-500 hover:text-red-600 hover:bg-red-100"
+            className=" bg-red-50 py-3 md:my-2 mr-4 px-4 rounded-2xl text-red-500 hover:text-red-600 hover:bg-red-100"
           />
         )}
         <Button

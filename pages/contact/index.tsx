@@ -84,7 +84,7 @@ function Contact() {
       <RootLayout>
         <div
           id="contact-root"
-          className="flex items-center h-full justify-start flex-wrap"
+          className="flex px-4 md:px-10 lg:px-32 items-center h-full justify-start flex-wrap"
         >
           <div className="w-full md:w-1/2">
             <div className="flex  items-center justify-center h-full">

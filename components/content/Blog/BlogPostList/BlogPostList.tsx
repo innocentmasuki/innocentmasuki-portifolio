@@ -6,6 +6,7 @@ import { BlogPostListProps } from "./type";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { useEffect, useState } from "react";
 import { FiSearch, FiX } from "react-icons/fi";
+import NoContent from "@/components/common/NoContent";
 
 export function BlogPostList({ posts, categories }: BlogPostListProps) {
   const [email, setEmail] = useState("");
@@ -41,12 +42,12 @@ export function BlogPostList({ posts, categories }: BlogPostListProps) {
   }, [search, selectedCategory]);
 
   return (
-    <div>
+    <div className="px-4 md:px-10 lg:px-32">
       <Heading text={"Stories, How-to & Ideas"} className="md:text-center " />
       <Paragraph
         className={"md:text-center"}
         text={
-          "Sharing personal experiences, thoughts, and musings on technology and beyond. Subscribe for new posts in your inbox."
+          "Sharing experiences, thoughts, and musings on technology and beyond. Subscribe for new posts in your inbox."
         }
       />
       <form>
@@ -77,7 +78,7 @@ export function BlogPostList({ posts, categories }: BlogPostListProps) {
                 selectedCategory === -1
                   ? " text-white   bg-gray-500"
                   : " text-gray-500    bg-white"
-              } mr-1  border-[1px] border-gray-500 cursor-pointer rounded-full px-2 py-1 text-base capitalize`}
+              } mr-1  border-2 border-gray-500 cursor-pointer rounded-xl px-2 py-1 text-base capitalize`}
             >
               All
             </span>
@@ -89,7 +90,7 @@ export function BlogPostList({ posts, categories }: BlogPostListProps) {
                     selectedCategory === index
                       ? " text-white   bg-gray-500"
                       : " text-gray-500    bg-white"
-                  } mr-1  border-[1px] border-gray-500 cursor-pointer whitespace-nowrap rounded-full px-2 py-1 text-base capitalize`}
+                  } mr-1  border-2 border-gray-500 cursor-pointer whitespace-nowrap rounded-xl px-2 py-1 text-base capitalize`}
                   key={index}
                 >
                   {category.title}
@@ -119,7 +120,9 @@ export function BlogPostList({ posts, categories }: BlogPostListProps) {
           </div>
         </div>
         {blogPosts?.length > 0 ? (
-          <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 3 }}>
+          <ResponsiveMasonry
+            columnsCountBreakPoints={{ 350: 1, 767: 3, 1024: 4 }}
+          >
             <Masonry>
               {[
                 ...blogPosts,
@@ -135,7 +138,16 @@ export function BlogPostList({ posts, categories }: BlogPostListProps) {
             </Masonry>
           </ResponsiveMasonry>
         ) : (
-          "No Posts Found"
+          <div className="flex w-full h-32 justify-center items-center">
+            <NoContent
+              className="text-3xl font-bold"
+              text={`No Post found ${
+                search.trim().length > 0
+                  ? " with a title '" + search.trim() + "'."
+                  : ""
+              }`}
+            />
+          </div>
         )}
       </div>
     </div>

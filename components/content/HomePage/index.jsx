@@ -41,7 +41,7 @@ export default function HomePage() {
   return (
     <>
       <div className=" relative cursor-none scrollbar-hide flex items-center w-full justify-center  h-full">
-        <div className="grayscale absolute top-0 w-full h-full items-center left-0 flex justify-center md:justify-between">
+        <div className="px-4 md:px-10 lg:px-32 grayscale absolute top-0 w-full h-full items-center left-0 flex justify-center md:justify-between">
           <HeroTexts />
           <InnocentImage />
         </div>
@@ -50,7 +50,7 @@ export default function HomePage() {
           style={{
             clipPath: "circle(144px at center)",
           }}
-          className="box absolute top-0 w-full h-full items-center left-0 flex justify-center md:justify-between"
+          className="box px-4 md:px-10 lg:px-32 absolute top-0 w-full h-full items-center left-0 flex justify-center md:justify-between"
         >
           <HeroTexts />
           <InnocentImage />
