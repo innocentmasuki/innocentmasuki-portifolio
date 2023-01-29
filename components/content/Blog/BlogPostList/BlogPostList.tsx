@@ -47,10 +47,10 @@ export function BlogPostList({ posts, categories }: BlogPostListProps) {
       <Paragraph
         className={"md:text-center"}
         text={
-          "Sharing experiences, thoughts, and musings on technology and beyond. Subscribe for new posts in your inbox."
+          "Sharing experiences, thoughts, and musings on technology and beyond."
         }
       />
-      <form>
+      {/* <form>
         <div className="w-full flex pt-5 mb-5 justify-center gap-2">
           <input
             type="email"
@@ -67,7 +67,7 @@ export function BlogPostList({ posts, categories }: BlogPostListProps) {
             </div>
           </button>
         </div>
-      </form>
+      </form> */}
 
       <div className="w-full">
         <div className="flex sticky  top-16 bg-white z-10 pt-5 pb-4 items-center flex-row justify-between">
