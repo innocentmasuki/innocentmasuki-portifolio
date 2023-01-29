@@ -1,4 +1,3 @@
-import Heading from "@/components/common/heading";
 import { BlogPostProps } from "./type";
 import Image from "next/image";
 import urlFor from "lib/urlFor";
@@ -10,8 +9,11 @@ import { useState } from "react";
 
 const BlogPost = ({ post }: BlogPostProps) => {
   const [coppied, setCoppied] = useState(false);
+  var URL = "";
 
-  const URL = window.location.href;
+  if (typeof window !== "undefined") {
+    URL = window.location.href;
+  }
 
   const copy = async (text: string) => {
     await navigator.clipboard.writeText(text);

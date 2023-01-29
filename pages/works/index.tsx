@@ -20,7 +20,7 @@ function Works() {
   return (
     <>
       <Head>
-        <title>i.me | Works</title>
+        <title>Works | i.me</title>
       </Head>
       <RootLayout>
         {isModalOpen === true ? (

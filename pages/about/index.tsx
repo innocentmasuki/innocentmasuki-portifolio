@@ -21,7 +21,7 @@ function About() {
   return (
     <>
       <Head>
-        <title>i.me | About</title>
+        <title>About | i.me</title>
       </Head>
       <RootLayout>
         <div className="w-full h-full px-4 md:px-10 lg:px-32 grid grid-cols-1  md:grid-cols-3">

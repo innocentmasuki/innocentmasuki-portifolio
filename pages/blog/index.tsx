@@ -15,7 +15,7 @@ export default function Blog({ preview, posts, categories }) {
     return (
       <>
         <Head>
-          <title>i.me | Blog</title>
+          <title>Blog | i.me</title>
         </Head>
         <RootLayout>
           <PreviewSuspense fallback="Loading...">

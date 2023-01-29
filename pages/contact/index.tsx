@@ -78,7 +78,7 @@ function Contact() {
   return (
     <>
       <Head>
-        <title>i.me | Contact</title>
+        <title>Contact | i.me</title>
       </Head>
 
       <RootLayout>
