@@ -1,5 +1,6 @@
-import { BlogPost } from "types";
+import { BlogPost, Category } from "types";
 
 export type BlogPostListProps = {
   posts: BlogPost[];
+  categories: Category[];
 };
