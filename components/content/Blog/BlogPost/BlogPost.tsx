@@ -9,11 +9,7 @@ import { useState } from "react";
 
 const BlogPost = ({ post }: BlogPostProps) => {
   const [coppied, setCoppied] = useState(false);
-  var URL = "";
-
-  if (typeof window !== "undefined") {
-    URL = window.location.href;
-  }
+  var URL = `https://www.innocentmasuki.me/blog/${post.slug.current}`;
 
   const copy = async (text: string) => {
     await navigator.clipboard.writeText(text);
@@ -78,7 +74,7 @@ const BlogPost = ({ post }: BlogPostProps) => {
                     <BsTwitter className="hover:text-[#1DA1F2] cursor-pointer" />
                   </a>
                   <a
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=http://google.com`}
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${URL}`}
                     target={"_blank"}
                     rel="noreferrer"
                   >
