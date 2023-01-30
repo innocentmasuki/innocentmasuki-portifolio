@@ -61,7 +61,7 @@ const BlogPost = ({ post }: BlogPostProps) => {
             className="object-cover"
           />
           <div className="absolute -bottom-10 right-0">
-            <div className=" sticky text-xl top-20 bg-gray-200 border-8 items-center border-r-0 border-white p-4 rounded-l-2xl flex flex-row gap-6">
+            <div className="pr-8 sticky text-xl top-20 bg-gray-200 border-8 items-center border-r-0 border-white p-4 rounded-l-2xl flex flex-row gap-6">
               {coppied ? (
                 <span className="text-xs">Coppied</span>
               ) : (
