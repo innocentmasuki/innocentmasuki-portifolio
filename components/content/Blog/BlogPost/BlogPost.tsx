@@ -123,7 +123,7 @@ const BlogPost = ({ post }: BlogPostProps) => {
         </div>
       </div>
 
-      <div className=" flex w-full flex-row justify-center">
+      <div className=" flex w-full mt-20 flex-row justify-center">
         <div className="max-w-6xl px-4">
           <PortableText
             // Pass in block content straight from Sanity.io
