@@ -17,7 +17,7 @@ const Article = ({ post }) => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content={`https://www.innocentmasuki.me/blog/${post.slug}`}
+          content={`https://www.innocentmasuki.me/blog/${post.slug.current}`}
         />
         <meta property="og:image" content={urlFor(post.mainImage).url()} />
         <meta property="og:description" content={`${post.title}`} />
