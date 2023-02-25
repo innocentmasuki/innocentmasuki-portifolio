@@ -82,7 +82,7 @@ const WhoAmI = ({ data }) => {
         )}
         <Button
           a={true}
-          title={"My resume"}
+          title={"My résumé"}
           link={
             "https://docs.google.com/document/d/1AfhSLWntV1B-zvpPEygaJwGbHDQRTN7HQPoVbtmhn24/edit?usp=sharing"
           }
