@@ -116,6 +116,15 @@ function Contact() {
                       {media.title}
                     </a>
                   ))}
+
+                  <a
+                    target={"_blank"}
+                    rel="noreferrer"
+                    href={"tel:+255766073577"}
+                    className="hover:underline text-red-500"
+                  >
+                    Phone
+                  </a>
                 </div>
               </div>
             </div>

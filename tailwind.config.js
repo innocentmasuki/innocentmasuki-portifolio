@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sacramento: ["Sacramento", "cursive"],
+        sacramento: ["Sacramento", "cursive", 'sans-serif'],
         visuelt: ["Visuelt", "sans-serif"],
       },
     },
