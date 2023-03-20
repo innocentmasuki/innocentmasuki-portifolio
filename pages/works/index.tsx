@@ -8,7 +8,7 @@ import Heading from "@/components/common/heading";
 import Paragraph from "@/components/common/paragraph";
 
 import data from "@/components/utils";
-import WorkItemsLayout from "@/components/content/WorkItemsLayout";
+import WorkItemsLayout from "@/components/section/WorkItemsLayout";
 
 function Works() {
   const [isModalOpen, setIsModalOpen] = useState(false);

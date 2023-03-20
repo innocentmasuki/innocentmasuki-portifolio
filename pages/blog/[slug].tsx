@@ -1,4 +1,4 @@
-import BlogPost from "@/components/content/Blog/BlogPost";
+import BlogPost from "@/components/section/Blog/BlogPost";
 import RootLayout from "@/components/rootLayout";
 import { client } from "lib/sanity.client";
 import urlFor from "lib/urlFor";

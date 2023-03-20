@@ -3,7 +3,7 @@ import { NextStudio } from "next-sanity/studio";
 import { StudioProvider, StudioLayout } from "sanity";
 
 import config from "../../sanity.config";
-import StudioNavbar from "@/components/content/Studio/StudioNavbar";
+import StudioNavbar from "@/components/section/Studio/StudioNavbar";
 
 export default function StudioPage() {
   return (

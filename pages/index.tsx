@@ -1,7 +1,7 @@
 import Head from "next/head";
 import RootLayout from "@/components/rootLayout";
 
-import HomePage from "@/components/content/HomePage";
+import HomePage from "@/components/section/HomePage";
 
 export default function Home() {
   return (

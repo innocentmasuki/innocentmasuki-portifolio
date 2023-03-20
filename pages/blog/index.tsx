@@ -2,12 +2,12 @@ import RootLayout from "@/components/rootLayout";
 import Head from "next/head";
 import { PreviewSuspense } from "next-sanity/preview";
 import { lazy } from "react";
-import { BlogPostList } from "@/components/content/Blog/BlogPostList";
+import { BlogPostList } from "@/components/section/Blog/BlogPostList";
 import { client } from "lib/sanity.client";
 import groq from "groq";
 
 const PreviewBlogPostList = lazy(
-  () => import("@/components/content/Blog/PreviewBlogPostList")
+  () => import("@/components/section/Blog/PreviewBlogPostList")
 );
 
 export default function Blog({ preview, posts, categories }) {
