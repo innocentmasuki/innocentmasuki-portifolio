@@ -1,6 +1,6 @@
 import Link from "next/link";
 import NavMenuItem from "./common/navMenuItem";
-import Footer from "./content/footer";
+import Footer from "./section/footer";
 
 import data from "./utils";
 // import Snowfall from "react-snowfall";

@@ -4,8 +4,8 @@ import RootLayout from "@/components/rootLayout";
 import Heading from "@/components/common/heading";
 import Paragraph from "@/components/common/paragraph";
 import Button from "@/components/common/button";
-import Skill from "@/components/content/skill";
-import SideNav from "@/components/content/SideNav";
+import Skill from "@/components/section/skill";
+import SideNav from "@/components/section/SideNav";
 import data from "@/components/utils";
 import { PopupButton } from "react-calendly";
 

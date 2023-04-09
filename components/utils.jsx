@@ -196,7 +196,7 @@ const works = [
         alt: "Afyacall website banner",
       },
     ],
-    url: "https://afyacall.co/tz",
+    url: "https://afyacall.co.tz",
     details:
       "An official website for **AfyaCall**. A mobile health service that allows people using any type of mobile phone to speak to the doctor, and gain access to medical services and consultations. Created with [ReactJS](https://reactjs.org/).",
   },
