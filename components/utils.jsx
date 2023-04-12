@@ -137,6 +137,22 @@ const works = [
       "A W-Magazine website for **Woonbedrijf**. I collaborated with an amazing team from [Sukuma Pixel](https://sukumapixel.com/). Created with [NextJS](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/).",
   },
   {
+    title: "ProphecyPulse",
+    banners: [
+      {
+        url: baseurl + "/prophecypulse/cover.png",
+        alt: "Prophecy Pulse cover",
+      },
+      {
+        url: baseurl + "/prophecypulse/first.png",
+        alt: "Prophecy Pulse app banner",
+      },
+    ],
+    url: "https://prophecypulse.web.app",
+    details: `The first decentralized prediction market platform directly integrated to [Telegram](https://t.me/prophecypulse_bot)
+     made betting as intuitive as writing a message in a chat group - the AI bot will create a wager out of any message sent in a group. Created with [ReactJS](https://reactjs.org/) and [Tailwindcss](https://tailwindcss.com/).`,
+  },
+  {
     title: "New Age Animations",
     banners: [
       {
