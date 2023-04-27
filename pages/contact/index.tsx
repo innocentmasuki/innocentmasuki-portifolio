@@ -120,7 +120,7 @@ function Contact() {
                   <a
                     target={"_blank"}
                     rel="noreferrer"
-                    href={"tel:+255766073577"}
+                    href={"tel:+27763052965"}
                     className="hover:underline text-red-500"
                   >
                     Phone

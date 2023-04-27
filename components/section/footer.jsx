@@ -24,7 +24,7 @@ function Footer({ data }) {
             {media.title}
           </a>
         ))}
-        <a href={"tel:+255766073577"} className="hover:underline">
+        <a href={"tel:+27763052965"} className="hover:underline">
           Phone
         </a>
       </div>
