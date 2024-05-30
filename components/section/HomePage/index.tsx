@@ -5,18 +5,16 @@ import InnocentImage from "./innocentImage";
 import HeroTexts from "./heroTexts";
 
 export default function HomePage() {
-  const cursorRef = useRef(null);
-  const colorRef = useRef(null);
+  const cursorRef = useRef<HTMLDivElement>(null);
+  const colorRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (
       cursorRef.current == null ||
-      colorRef.current == null ||
-      colorRef == null ||
-      cursorRef == null
+        colorRef.current == null
     )
       return;
     document.addEventListener("mousemove", (e) => {
-      if (cursorRef.current == null) return;
+      if (cursorRef.current == null || colorRef.current == null) return;
 
       cursorRef.current.setAttribute(
         "style",
@@ -40,7 +38,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className=" relative cursor-none scrollbar-hide flex items-center w-full justify-center  h-full">
+      <div className=" relative cursor-none scrollbar-hide flex items-center w-full justify-center  h-full overflow-hidden">
         <div className="px-4 md:px-10 lg:px-32 grayscale absolute top-0 w-full h-full items-center left-0 flex justify-center md:justify-between">
           <HeroTexts />
           <InnocentImage />
