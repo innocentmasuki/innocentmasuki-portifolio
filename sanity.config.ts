@@ -13,8 +13,8 @@ export default defineConfig({
   name: "innocent-portifolio-blog",
   title: "Innocent portifolio blog",
 
-  projectId,
-  dataset,
+  projectId:projectId as string,
+  dataset: dataset as string,
 
   plugins: [deskTool(), visionTool()],
 

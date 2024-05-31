@@ -99,7 +99,7 @@ function Contact() {
                 {showWidget && (
                   <PopupButton
                     url="https://calendly.com/innocentmasuki/lets-talk"
-                    rootElement={document.getElementById("contact-root")}
+                    rootElement={document.getElementById("contact-root") as HTMLElement}
                     text="Schedule an appointment"
                     className="my-8 bg-red-50 hover:bg-red-100 py-3 px-4 rounded-2xl text-red-500 hover:text-red-600"
                   />

@@ -12,19 +12,19 @@ export function BlogPostList({ posts, categories }: BlogPostListProps) {
   const [email, setEmail] = useState("");
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(-1);
-  const [blogPosts, setBlogPosts] = useState(posts);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]|undefined>(posts);
 
-  const filterBySearch = (blogPosts: BlogPost[]) => {
+  const filterBySearch = (blogPosts: BlogPost[]|undefined) => {
     if (search.trim().length > 0)
-      return blogPosts.filter((blogPost: BlogPost) =>
+      return blogPosts?.filter((blogPost: BlogPost) =>
         blogPost.title.toLowerCase().includes(search.trim().toLowerCase())
       );
     else return blogPosts;
   };
 
-  const filterByCategory = (blogPosts: BlogPost[]) => {
+  const filterByCategory = (blogPosts: BlogPost[]|undefined) => {
     if (selectedCategory > -1)
-      return blogPosts.filter((blogPost: BlogPost) =>
+      return blogPosts?.filter((blogPost: BlogPost) =>
         blogPost?.categories?.some(
           (category: Category) =>
             category?._id === categories[selectedCategory]._id
@@ -119,12 +119,12 @@ export function BlogPostList({ posts, categories }: BlogPostListProps) {
             )}
           </div>
         </div>
-        {blogPosts?.length > 0 ? (
+        {blogPosts && blogPosts?.length > 0 ? (
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 350: 1, 767: 3, 1024: 4 }}
           >
             <Masonry>
-              {blogPosts.map((blogPost: BlogPost, index: number) => (
+              {blogPosts?.map((blogPost: BlogPost, index: number) => (
                 <BlogPostCard index={index} key={index} post={blogPost} />
               ))}
             </Masonry>

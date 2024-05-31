@@ -75,7 +75,7 @@ const WhoAmI = ({ data }) => {
         {showWidget && (
           <PopupButton
             url="https://calendly.com/innocentmasuki/lets-talk"
-            rootElement={document.getElementById("about-root")}
+            rootElement={document.getElementById("about-root") as HTMLElement}
             text="Schedule an appointment"
             className=" bg-red-50 py-3 md:my-2 mr-4 px-4 rounded-2xl text-red-500 hover:text-red-600 hover:bg-red-100"
           />
