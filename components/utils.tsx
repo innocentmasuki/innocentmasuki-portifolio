@@ -120,7 +120,7 @@ const navMenuRoutes = [
 
 const aboutMe = {
   bio: "I am a software developer working productively in dynamic environments. Much interested in mobile and front-end development. Proud team player focused on achieving project objectives with speed and accuracy.",
-  hobbies: "video games,movies,drawing,animations",
+  hobbies: "video games,movies,drawing",
 };
 
 const works = [

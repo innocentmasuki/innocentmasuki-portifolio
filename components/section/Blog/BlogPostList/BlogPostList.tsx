@@ -42,7 +42,7 @@ export function BlogPostList({ posts, categories }: BlogPostListProps) {
   }, [search, selectedCategory]);
 
   return (
-    <div className="px-4 md:px-10 lg:px-32">
+    <div className="px-4 md:px-10 lg:px-32 pb-20">
       <Heading text={"Stories, How-to & Ideas"} className="md:text-center " />
       <Paragraph
         className={"md:text-center"}

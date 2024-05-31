@@ -24,7 +24,7 @@ function About() {
         <title>About | i.me</title>
       </Head>
       <RootLayout>
-        <div className="w-full h-full px-4 md:px-10 lg:px-32 grid grid-cols-1  md:grid-cols-3">
+        <div className="w-full h-full px-4 md:px-10 lg:px-32 grid grid-cols-1  md:grid-cols-3 pb-20">
           <div className="hidden md:block top-20">
             <SideNav
               sideMenuTitles={sideMenuTitles}
