@@ -201,22 +201,6 @@ const works = [
       "An official website for **Meniscus Techlogies**, A software company based in Tanzania. Created with [ReactJS](https://reactjs.org/).",
   },
   {
-    title: "Afyacall",
-    banners: [
-      {
-        url: baseurl + "/afyacall/cover.png",
-        alt: "Afyacall cover",
-      },
-      {
-        url: baseurl + "/afyacall/first.png",
-        alt: "Afyacall website banner",
-      },
-    ],
-    url: "https://afyacall.co.tz",
-    details:
-      "An official website for **AfyaCall**. A mobile health service that allows people using any type of mobile phone to speak to the doctor, and gain access to medical services and consultations. Created with [ReactJS](https://reactjs.org/).",
-  },
-  {
     title: "This Website",
     banners: [
       {
