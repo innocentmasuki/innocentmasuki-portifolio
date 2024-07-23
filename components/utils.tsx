@@ -164,7 +164,7 @@ const works = [
         alt: "New age animation website banner",
       },
     ],
-    url: "https://newageanimations.com/",
+    url: "https://newageanimations.vercel.app/",
     details:
       "Official website for **New Age Animations**, A company creating 3D animations for entertainment 🎬. Created with [ReactJS](https://reactjs.org/), [Tailwindcss](https://tailwindcss.com/) and [ThreeJS](https://threejs.org/) technologies.",
   },
