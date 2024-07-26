@@ -166,7 +166,7 @@ const works = [
     ],
     url: "https://newageanimations.vercel.app/",
     details:
-      "Official website for **New Age Animations**, A company creating 3D animations for entertainment 🎬. Created with [ReactJS](https://reactjs.org/), [Tailwindcss](https://tailwindcss.com/) and [ThreeJS](https://threejs.org/) technologies.",
+      "Official website for **New Age Animations**, A company creating 3D animations for entertainment 🎬. This design is an inspiration from [Minh Pham](https://cdn.dribbble.com/users/824641/screenshots/17566833/media/cc0b6caa7e75d329bbfaeaf62eb32b02.mp4). Created with [ReactJS](https://reactjs.org/), [Tailwindcss](https://tailwindcss.com/) and [ThreeJS](https://threejs.org/) technologies.",
   },
   {
     title: "Mr Raha",
