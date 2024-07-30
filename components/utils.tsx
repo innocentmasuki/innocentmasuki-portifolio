@@ -140,11 +140,11 @@ const works = [
     title: "SHOWOFFPLAY",
     banners: [
       {
-        url: baseurl + "/logo.png",
+        url: "https://showoffplay.com/logo.png",
         alt: "Showoffplay logo",
       },
       {
-        url: baseurl + "/banner.png",
+        url: "https://showoffplay.com/banner.png",
         alt: "Showoffplay banner",
       },
     ],
