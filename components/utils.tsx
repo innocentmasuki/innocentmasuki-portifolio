@@ -137,6 +137,21 @@ const works = [
       "A W-Magazine website for **Woonbedrijf**. I collaborated with an amazing team from [Sukuma Pixel](https://sukumapixel.com/). Created with [NextJS](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/).",
   },
   {
+    title: "SHOWOFFPLAY",
+    banners: [
+      {
+        url: baseurl + "/logo.png",
+        alt: "Showoffplay logo",
+      },
+      {
+        url: baseurl + "/banner.png",
+        alt: "Showoffplay banner",
+      },
+    ],
+    url: "https://showoffplay.com",
+    details: `Tune in to SHOWOFFPLAY to watch live gaming streams. Catch your favorite gamers in action and join the community of gaming enthusiasts. Stream now on various platforms now at [Twitch](https://twitch.tv/showoffplay) and [YouTube](https://youtube.com/@showoffplay/live).`,
+  },
+  {
     title: "ProphecyPulse",
     banners: [
       {
