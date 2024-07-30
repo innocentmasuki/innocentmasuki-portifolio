@@ -54,6 +54,7 @@ const WorkItem = ({ work, setIframeUrl, toggelModal }) => {
                   <Image
                     src={banner.url}
                     alt={banner.alt}
+                    crossOrigin={"anonymous"}
                     layout="fill"
                     priority
                     objectFit="cover"
