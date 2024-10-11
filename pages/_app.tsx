@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
       <button onClick={() => handleAudioPlayer()}
              className={"h-full w-full flex flex-col justify-center items-center"} >
         {isPlaying ? <IoPause className="text-xl font-bold" /> :
-          <IoPlay className="pl-1 text-xl font-bold " />}
+          <IoPlay className="pl-[2px] text-xl font-bold " />}
       </button>
     </div>
 
