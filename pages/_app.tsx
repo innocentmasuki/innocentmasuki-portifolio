@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     }
   }, [isPlaying]);
   return <div className='bg-white-100 relative' onClick={()=>setIsPlaying(true)}>
-    <audio ref={audioRef} src="/audio/innocent-resume-2023.wav" />
+    <audio ref={audioRef} src="/audio/innocent-resume-2024.wav" />
     <Component {...pageProps} /></div>
 }
 
