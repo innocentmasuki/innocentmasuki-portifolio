@@ -22,14 +22,14 @@ export default function HomePage() {
           e.pageY +
           "px - 220px); left: calc(" +
           e.pageX +
-          "px - 270px);"
+          "px - 145px);"
       );
 
       colorRef.current.setAttribute(
         "style",
         "clip-path: circle(144px at calc(" +
           e.pageX +
-          "px - 125px) calc(" +
+          "px - 0px) calc(" +
           e.pageY +
           "px - 75px))"
       );
