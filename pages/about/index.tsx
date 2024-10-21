@@ -74,7 +74,7 @@ const WhoAmI = ({ data }) => {
       <Paragraph text={data.aboutMe.bio} className="md:text-center " />
       <Paragraph text={"Thanks for stopping by!"} className="md:text-center " />
       <div className={'w-full flex flex-row justify-start md:justify-center md:mb-10 mb-5'}>
-        <Image  src={"/images/signature.png"}  alt="Innocent Masuki signature" width={150} height={50} />
+        <Image  src={"/images/signature.png"} priority alt="Innocent Masuki signature" width={150} height={50} />
       </div>
       <div className="md:flex gap-4 md:justify-center">
         {showWidget && (
