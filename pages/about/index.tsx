@@ -11,6 +11,7 @@ import { PopupButton } from "react-calendly";
 
 import { useState, useEffect } from "react";
 import { useWindowSize } from "hooks/useWindowSize";
+import Image from "next/image";
 
 function About() {
   const [activeTab, setActiveTab] = useState(1);
@@ -70,7 +71,11 @@ const WhoAmI = ({ data }) => {
     <div id="about-root">
       <Heading text={"Who am I?"} className="block md:hidden md:text-center" />
       <Paragraph text={"I'm Innocent Masuki."} className="md:text-center" />
-      <Paragraph text={data.aboutMe.bio} className="md:text-center mb-4" />
+      <Paragraph text={data.aboutMe.bio} className="md:text-center " />
+      <Paragraph text={"Thanks for stopping by!"} className="md:text-center " />
+      <div className={'w-full flex flex-row justify-start md:justify-center md:mb-10 mb-5'}>
+        <Image  src={"/images/signature.png"}  alt="Innocent Masuki signature" width={150} height={50} />
+      </div>
       <div className="md:flex gap-4 md:justify-center">
         {showWidget && (
           <PopupButton
