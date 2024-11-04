@@ -76,6 +76,10 @@ const WhoAmI = ({ data }) => {
       <div className={'w-full flex flex-row justify-start md:justify-center md:mb-10 mb-5'}>
         <Image  src={"/images/signature.png"} priority alt="Innocent Masuki signature" width={150} height={50} />
       </div>
+      <iframe allow="autoplay *; encrypted-media *;" frameBorder="0" height="450"
+              className={"w-full md:w-96 bg-transparent overflow-hidden max-w-[660px]"}
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+              src="https://embed.music.apple.com/za/station/dont-say-you-love-me-station/ra.1268845896"></iframe>
       <div className="md:flex gap-4 md:justify-center">
         {showWidget && (
           <PopupButton
