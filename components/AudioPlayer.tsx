@@ -9,6 +9,11 @@ export default function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [played, setPlayed] = useState(false);
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleAudioPlayer = () => {
     if (audioRef.current) {
@@ -23,6 +28,7 @@ export default function AudioPlayer() {
   };
 
   useEffect(() => {
+    if (!mounted) return;
     const handleGlobalClick = () => {
       if (!played) {
         setPlayed(true);
@@ -32,7 +38,9 @@ export default function AudioPlayer() {
 
     window.addEventListener("click", handleGlobalClick);
     return () => window.removeEventListener("click", handleGlobalClick);
-  }, [played, isPlaying]);
+  }, [played, isPlaying, mounted]);
+
+  if (!mounted) return null;
 
   return (
     <>

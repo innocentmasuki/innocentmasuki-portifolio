@@ -4,11 +4,12 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 function NavMenuItem({ title, path }) {
   const pathname = usePathname();
-  const isActive = pathname === path || (pathname.startsWith(path) && path !== "/");
+  const isActive = pathname ? (pathname === path || (pathname.startsWith(path) && path !== "/")) : false;
   return (
     <Link href={path}>
       <div className="duration-170  pt-3 cursor-pointer">
         <div
+          suppressHydrationWarning
           className={
             isActive
               ? "  text-red-500 "
@@ -18,6 +19,7 @@ function NavMenuItem({ title, path }) {
           {title}
         </div>
         <div
+          suppressHydrationWarning
           className={`text-center leading-0 font-bold ${
             isActive
               ? " visible text-red-500 "
