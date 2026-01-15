@@ -1,13 +1,13 @@
+"use client";
+
 import { HiOutlineBriefcase } from "react-icons/hi";
-
 import Image from "next/image";
-
 import { AiOutlineEye } from "react-icons/ai";
 import { FiArrowUpRight } from "react-icons/fi";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -55,9 +55,9 @@ const WorkItem = ({ work, setIframeUrl, toggelModal }) => {
                     src={banner.url}
                     alt={banner.alt}
                     crossOrigin={"anonymous"}
-                    layout="fill"
+                    fill
                     priority
-                    objectFit="cover"
+                    style={{ objectFit: "cover" }}
                   />
                 </SwiperSlide>
               ))

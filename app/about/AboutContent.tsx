@@ -1,6 +1,5 @@
-import Head from "next/head";
+"use client";
 
-import RootLayout from "@/components/rootLayout";
 import Heading from "@/components/common/heading";
 import Paragraph from "@/components/common/paragraph";
 import Button from "@/components/common/button";
@@ -10,54 +9,45 @@ import data from "@/components/utils";
 import { PopupButton } from "react-calendly";
 
 import { useState, useEffect } from "react";
-import { useWindowSize } from "hooks/useWindowSize";
+import { useWindowSize } from "@/hooks/useWindowSize";
 import Image from "next/image";
 
-function About() {
+export default function AboutContent() {
   const [activeTab, setActiveTab] = useState(1);
 
   const size = useWindowSize();
   const [sideMenuTitles] = useState(["Who am I?", "Hobbies", "Skills & Tools"]);
 
   return (
-    <>
-      <Head>
-        <title>About | i.me</title>
-      </Head>
-      <RootLayout>
-        <div className="w-full h-full px-4 md:px-10 lg:px-32 grid grid-cols-1  md:grid-cols-3 pb-20">
-          <div className="hidden md:block top-20">
-            <SideNav
-              sideMenuTitles={sideMenuTitles}
-              onChange={(activeTab) => setActiveTab(activeTab)}
-            />
-          </div>
-          <div className="md:col-span-2 p-4 md:h-full md:w-full md:flex md:justify-center md:items-center">
-            {size.width > 768 ? (
-              activeTab === 0 && <WhoAmI data={data} />
-            ) : (
-              <WhoAmI data={data} />
-            )}
+    <div className="w-full h-full px-4 md:px-10 lg:px-32 grid grid-cols-1 md:grid-cols-3 pb-20">
+      <div className="hidden md:block top-20">
+        <SideNav
+          sideMenuTitles={sideMenuTitles}
+          onChange={(activeTab) => setActiveTab(activeTab)}
+        />
+      </div>
+      <div className="md:col-span-2 p-4 md:h-full md:w-full md:flex md:justify-center md:items-center">
+        {size.width && size.width > 768 ? (
+          activeTab === 0 && <WhoAmI data={data} />
+        ) : (
+          <WhoAmI data={data} />
+        )}
 
-            {size.width > 768 ? (
-              activeTab === 1 && <Hobbies data={data} />
-            ) : (
-              <Hobbies data={data} />
-            )}
+        {size.width && size.width > 768 ? (
+          activeTab === 1 && <Hobbies data={data} />
+        ) : (
+          <Hobbies data={data} />
+        )}
 
-            {size.width > 768 ? (
-              activeTab === 2 && <SkillsTools data={data} />
-            ) : (
-              <SkillsTools data={data} />
-            )}
-          </div>
-        </div>
-      </RootLayout>
-    </>
+        {size.width && size.width > 768 ? (
+          activeTab === 2 && <SkillsTools data={data} />
+        ) : (
+          <SkillsTools data={data} />
+        )}
+      </div>
+    </div>
   );
 }
-
-export default About;
 
 const WhoAmI = ({ data }) => {
   const [showWidget, setShowWidget] = useState(false);
@@ -74,7 +64,7 @@ const WhoAmI = ({ data }) => {
       <Paragraph text={data.aboutMe.bio} className="md:text-center " />
       <Paragraph text={"Thanks for stopping by!"} className="md:text-center " />
       <div className={'w-full flex flex-row justify-start md:justify-center md:mb-10 mb-5'}>
-        <Image  src={"/images/signature.png"} priority alt="Innocent Masuki signature" width={150} height={50} />
+        <Image src={"/images/signature.png"} priority alt="Innocent Masuki signature" width={150} height={50} />
       </div>
       <div className="md:flex gap-4 md:justify-center">
         {showWidget && (

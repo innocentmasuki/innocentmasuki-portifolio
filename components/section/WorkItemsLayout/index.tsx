@@ -1,4 +1,6 @@
-import { useWindowSize } from "hooks/useWindowSize";
+"use client";
+
+import { useWindowSize } from "@/hooks/useWindowSize";
 import WorkItem from "../WorkItem";
 
 const WorkItemsLayout = ({ works, setIframeUrl, toggelModal }) => {

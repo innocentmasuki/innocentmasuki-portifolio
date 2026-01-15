@@ -1,17 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@font-face {
+@theme {
+  --font-sacramento: "Sacramento", cursive, sans-serif;
+  --font-visuelt: "Visuelt", sans-serif;
+}
+
+@layer base {
+  @font-face {
     font-family: "Sacramento";
     src: url("../asset/fonts/sacramento-regular.ttf");
     font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
     font-family: "Visuelt";
     src: url("../asset/fonts/visuelt-regular.ttf");
     font-style: normal;
+  }
 }
 
 * {
