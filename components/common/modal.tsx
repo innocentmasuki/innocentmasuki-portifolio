@@ -3,7 +3,7 @@ import { FiX } from "react-icons/fi";
 function Modal({ children, toggelModal, className }) {
   return (
     <div>
-      <div className="flex justify-center backdrop-blur bg-gray-200 bg-opacity-25  items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+      <div className="flex justify-center backdrop-blur bg-gray-200/25  items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
         <div className="relative w-auto my-6 mx-auto ">
           <div className="border-2  border-gray-700 rounded-2xl  relative flex flex-col w-full bg-white outline-none focus:outline-none">
             <button>

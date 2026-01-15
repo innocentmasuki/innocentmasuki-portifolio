@@ -30,7 +30,7 @@ export default function RootLayout({
                 <span className="text-red-500">.me</span>
               </span>
             </Link>
-            <ul className="font-visuel text-xs gap-x-4 uppercase flex justify-between">
+            <ul className="font-visuelt text-xs gap-x-4 uppercase flex justify-between">
               {data.navMenuRoutes.map((route, index) => (
                 <li key={index}>
                   <NavMenuItem title={route.title} path={route.path} />
