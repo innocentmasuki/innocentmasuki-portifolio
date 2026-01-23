@@ -19,7 +19,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="bg-white-100 relative" suppressHydrationWarning>
-        <AudioPlayer />
         <div className="flex relative font-visuelt flex-col h-screen">
           <nav className="w-full pb-2 px-4 md:px-10 lg:px-32 fixed top-0 z-50 left-0 bg-white pt-4 flex justify-between">
             <Link href={"/"}>

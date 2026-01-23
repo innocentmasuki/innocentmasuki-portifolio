@@ -16,7 +16,7 @@ export default function AboutContent() {
   const [activeTab, setActiveTab] = useState(1);
 
   const size = useWindowSize();
-  const [sideMenuTitles] = useState(["Who am I?", "Hobbies", "Skills & Tools"]);
+  const [sideMenuTitles] = useState(["Who am I?", "Hobbies"]);
 
   return (
     <div className="w-full h-full px-4 md:px-10 lg:px-32 grid grid-cols-1 md:grid-cols-3 pb-20">
@@ -39,11 +39,7 @@ export default function AboutContent() {
           <Hobbies data={data} />
         )}
 
-        {size.width && size.width > 768 ? (
-          activeTab === 2 && <SkillsTools data={data} />
-        ) : (
-          <SkillsTools data={data} />
-        )}
+
       </div>
     </div>
   );
@@ -98,27 +94,6 @@ const Hobbies = ({ data }) => {
         text={data.aboutMe.hobbies.replaceAll(",", " | ")}
         className="md:text-center"
       />
-    </div>
-  );
-};
-
-const SkillsTools = ({ data }) => {
-  return (
-    <div>
-      <Heading
-        text={"Skills & tools"}
-        className="md:text-center mt-16 block md:hidden"
-      />
-      <div className="grid grid-cols-1 z-30 py-4 md:grid-cols-2 lg:grid-cols-3  gap-5">
-        {data.skills.map((skill, index) => (
-          <Skill
-            icon={skill.icon}
-            link={skill.link}
-            title={skill.title}
-            key={index}
-          />
-        ))}
-      </div>
     </div>
   );
 };

@@ -84,17 +84,18 @@ const skills = [
 const mediaData = {
   email: "innocent@syncwhite.com",
   medias: [
-    {
-      title: "Twitter",
-      link: "https://twitter.com/innocentmasuki",
-    },
+
     {
       title: "GitHub",
       link: "https://github.com/innocentmasuki",
     },
     {
-      title: "Dribbble",
-      link: "https://dribbble.com/innocentmasuki",
+      title: "Instagram",
+      link: "https://instagram.com/innocent.masuki",
+    },
+    {
+      title: "X",
+      link: "https://x.com/innocentmasuki",
     },
   ],
 };
@@ -104,10 +105,7 @@ const navMenuRoutes = [
     title: "about",
     path: "/about",
   },
-  {
-    title: "works",
-    path: "/works",
-  },
+
   {
     title: "contact",
     path: "/contact",
@@ -115,7 +113,7 @@ const navMenuRoutes = [
 ];
 
 const aboutMe = {
-  bio: "I am a software developer working productively in dynamic environments. Much interested in mobile and front-end development. Proud team player focused on achieving project objectives with speed and accuracy.",
+  bio: "A thoughtful software developer passionate about building innovative solutions. Currently working on Mapene, a streaming platform for movies and TV series designed to bring people together through shared experiences and seamless content delivery.",
   hobbies: "video games,movies,drawing",
 };
 
