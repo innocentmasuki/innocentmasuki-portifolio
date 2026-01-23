@@ -13,6 +13,7 @@
     "@types/react-dom": "^19.2.3",
     "eslint-config-next": "^16.1.2",
     "next": "^16.1.2",
+    "next-devtools-mcp": "^0.3.10",
     "nodemailer": "^7.0.12",
     "react": "^19.2.3",
     "react-calendly": "^4.4.0",
