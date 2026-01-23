@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
-import AudioPlayer from "@/components/AudioPlayer";
 import Link from "next/link";
 import NavMenuItem from "@/components/common/navMenuItem";
 import Footer from "@/components/section/footer";
